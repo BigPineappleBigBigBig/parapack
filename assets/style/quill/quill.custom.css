@@ -1,0 +1,6 @@
+.ql-editor pre{
+    white-space: break-spaces;
+}
+.ql-editor .ql-indent-8:not(.ql-direction-rtl){
+    padding-left: 0;
+}

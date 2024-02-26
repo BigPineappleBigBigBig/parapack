@@ -1,0 +1,177 @@
+{
+  "id": "3610020",
+  "name": "ibox",
+  "font_family": "ibox",
+  "css_prefix_text": "ib-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13332684",
+      "name": "商城",
+      "font_class": "shangcheng",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "669645",
+      "name": "plus",
+      "font_class": "plus",
+      "unicode": "e6f6",
+      "unicode_decimal": 59126
+    },
+    {
+      "icon_id": "16549979",
+      "name": "minus",
+      "font_class": "minus",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "15838547",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e683",
+      "unicode_decimal": 59011
+    },
+    {
+      "icon_id": "5093337",
+      "name": "平台管理",
+      "font_class": "pingtaiguanli",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1447730",
+      "name": "页面",
+      "font_class": "page",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1901647",
+      "name": "品牌",
+      "font_class": "brand",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "18311575",
+      "name": "设 置",
+      "font_class": "setting",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "21890667",
+      "name": "albums-outline",
+      "font_class": "album",
+      "unicode": "e7d0",
+      "unicode_decimal": 59344
+    },
+    {
+      "icon_id": "22960799",
+      "name": "创作者中心",
+      "font_class": "creator",
+      "unicode": "e823",
+      "unicode_decimal": 59427
+    },
+    {
+      "icon_id": "23419470",
+      "name": "空投",
+      "font_class": "drop",
+      "unicode": "e894",
+      "unicode_decimal": 59540
+    },
+    {
+      "icon_id": "11111023",
+      "name": "微信",
+      "font_class": "wechat",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "15783537",
+      "name": "app",
+      "font_class": "app",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8826711",
+      "name": "box",
+      "font_class": "mbox",
+      "unicode": "e928",
+      "unicode_decimal": 59688
+    },
+    {
+      "icon_id": "1172635",
+      "name": "分类",
+      "font_class": "classify",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "8455512",
+      "name": "通用协议园区",
+      "font_class": "common",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "11121383",
+      "name": "数据管理",
+      "font_class": "data",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "11169284",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "22697525",
+      "name": "合成",
+      "font_class": "synth",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "25957232",
+      "name": "隐私、私密、保密",
+      "font_class": "privacy",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "26182298",
+      "name": "公告",
+      "font_class": "notice",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "529332",
+      "name": "透明底价",
+      "font_class": "price",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "15838444",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "201525",
+      "name": "礼物 活动",
+      "font_class": "gift",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}
