@@ -30,11 +30,11 @@ if(process.env.MOCK){
 export default {
     target: 'static',
     head: {
-        title: "iBox 市场管理后台",
+        title: "ParaPack",
         meta: [
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-            {hid: 'description', name: 'description', content: 'app配置管理后台'},
+            {hid: 'description', name: 'description', content: 'ParaPack'},
             {name: 'format-detection', content: 'telephone=no'}
         ],
         link: [
@@ -63,7 +63,9 @@ export default {
         // }
     ],
     plugins,
-    buildModules: [],
+    buildModules: [
+        'nuxt-windicss',
+      ],
     modules: [
         '@nuxt/typescript-build',
         "cookie-universal-nuxt",

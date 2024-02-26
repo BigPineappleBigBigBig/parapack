@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { TOKEN_NAME } from "@/config/app";
-import { UserInfoApi } from "@/config/rest.api";
+// import { UserInfoApi } from "@/config/rest.api";
 
 export const state = () => ({
     locale: 'zh-cn',
@@ -27,13 +27,13 @@ export const mutations = {
 
 export const actions = {
     async checkToken({commit, dispatch}) {
-        const {success, data} = await UserInfoApi.check();
-        let uid = (success && data.uid) || null;
-        commit('SET_IS_LOGIN', !!uid);
-        if (!uid) {
-            commit("SET_USER_INFO", {});
-            this.$router.push('/{#LANG#}/login/');
-        }
+        // const {success, data} = await UserInfoApi.check();
+        // let uid = (success && data.uid) || null;
+        // commit('SET_IS_LOGIN', !!uid);
+        // if (!uid) {
+        //     commit("SET_USER_INFO", {});
+        //     this.$router.push('/{#LANG#}/login/');
+        // }
     },
     async logout({commit}) {
         Cookies.remove(TOKEN_NAME);
