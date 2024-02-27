@@ -1,20 +1,14 @@
 export default {
-  'ubox-border': {
-    '@apply': 'border-ubox-border dark:border-ubox-border-dark',
-  },
-  'ubox-border-2': {
-    '@apply': 'border-ubox-border-2 dark:border-ubox-border-2-dark',
-  },
-  'ubox-border-t1': {
-    '@apply': 'border-ubox-t1 dark:border-ubox-t1-dark',
-  },
-  'ubox-border-8': {
-    '@apply': 'border-ubox-border-8 dark:border-ubox-border-8-dark',
-  },
-  'ubox-border-primary': {
-    '@apply': 'border-ubox-primary dark:border-ubox-primary-dark',
-  },
-  'ubox-border-orange': {
-    '@apply': 'border-ubox-orange dark:border-ubox-orange-dark',
-  }
+    'pp-border-primary': {
+        '@apply': 'border-pp-primary dark:border-pp-primary-dark',
+    },
+    'pp-border': {
+        '@apply': 'border-pp-border dark:border-pp-border-dark',
+    },
+    'pp-border-2': {
+        '@apply': 'border-pp-border-2 dark:border-pp-border-2-dark',
+    },
+    'pp-border-3': {
+        '@apply': 'border-pp-border-3 dark:border-border-3-dark',
+    },
 };

@@ -1,3 +1,5 @@
+import i18n from './config/i18n';
+
 const path = require('path');
 const {MARKET_URL, BASE_URL} = require('./config/app');
 
@@ -50,22 +52,23 @@ export default {
             },
         ],
     },
-    styleResources: {
-        scss: [
-            "~assets/style/index.scss",
-        ],
-    },
+    // styleResources: {
+    //     scss: [
+    //         "~assets/style/index.scss",
+    //     ],
+    // },
     css: [
-        '~assets/plugin/iconfont/iconfont.css',
+        "~assets/style/element-variables.scss",
+        "~assets/style/index.scss",
         // {
-        //     src: '~assets/style/iviewStyle.less',
-        //     less: true
-        // }
+        //     src: ,
+        //     scss: true
+        // },
     ],
     plugins,
     buildModules: [
         'nuxt-windicss',
-      ],
+    ],
     modules: [
         '@nuxt/typescript-build',
         "cookie-universal-nuxt",
@@ -73,6 +76,20 @@ export default {
         '@nuxtjs/html-minifier',
         "@nuxtjs/style-resources",
         ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 }],
+        [
+            '@nuxtjs/i18n',
+            {
+                locales: [
+                    { code: 'zhCN', iso: 'zh-CN', file: 'zh-CN.json'},
+                    { code: 'enUS', iso: 'en-US', file: 'en-US.json'}
+                ],
+                vueI18nLoader: true,
+                lazy: true,
+                langDir: 'lang/',
+                defaultLocale: 'zhCN',
+                vueI18n: i18n
+            }
+        ]
     ],
     modulesDir: ["node_modules", path.resolve(__dirname, "loader")],
     generate: {

@@ -1,5 +1,5 @@
 <template>
-    <div>管理平台</div>
+    <div>{{ $t('welcome') }}</div>
 </template>
 
 <script>
@@ -8,5 +8,5 @@ export default {
     async created() {
         // this.$router.push('/market');
     }
-}
+};
 </script>
