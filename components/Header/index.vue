@@ -4,7 +4,7 @@
       <LogoIcon></LogoIcon>
           <div class="flex justify-between items-center gap-x-100px">
             <Menu></Menu>
-            <div class="flex gap-x-40px">
+            <div class="flex gap-x-40px items-center">
               <el-button type="primary" class="pp-btn-20-l">登录/注册</el-button>
               <LanguageInput></LanguageInput>
             </div>

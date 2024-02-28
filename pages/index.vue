@@ -1,5 +1,12 @@
 <template>
-    <div>{{ $t('welcome') }}</div>
+    <div>
+        <div>
+            <img
+                class="w-full h-auto"
+                src="~/assets/images/homeBanner.jpg"
+            >
+        </div>
+    </div>
 </template>
 
 <script>

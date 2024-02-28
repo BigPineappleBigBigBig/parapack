@@ -1,15 +1,16 @@
 <template>
-    <ul class="flex gap-x-99px">
+    <div class="flex h-[62px] gap-x-100px">
+        <template v-for="itemMenu in menu">
         <li
-            :class="`text-18px :hover(pp-text-primary font-600) ${activeRoute === menu.name ? 'pp-text-primary font-600' : ''}`"
-            v-for="itemMenu in menu"
+            :class="`text-18px h-full flex items-center justify-center hover:(pp-text-primary font-600) ${activeRoute === itemMenu.name ? 'pp-text-primary font-600' : ''}`"
             :key="itemMenu.name"
         >
             <nuxt-link :to="itemMenu.name">
                 {{ itemMenu.title }}
             </nuxt-link>
         </li>
-    </ul>
+    </template>
+    </div>
 </template>
 
 <script>
@@ -17,6 +18,7 @@ export default {
     name: "Menu",
     data: function () {
         return {
+            activeRoute: '/',
             menu: [
                 {
                     title: "生态",
@@ -37,10 +39,17 @@ export default {
             ],
         };
     },
-    computed: {
-        activeRoute() {
-            const { name, meta } = this.$route;
-            return name;
+    watch: {
+        // activeRoute() {
+        //     const { path } = this.$route;
+        //     console.log(path==='/','sdads',path)
+        //     return path;
+        // },
+        '$route.path':{
+            handler(v) {
+                this.activeRoute = this.$route.path
+            },
+            immediate:true
         },
     },
 };

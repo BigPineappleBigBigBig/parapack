@@ -1,6 +1,5 @@
 <template>
-  <div class="lang-dropdown">
-    <el-dropdown trigger="click">
+    <el-dropdown trigger="click" @command="onChange">
       <span class="cursor-pointer">
         {{ langMap[$i18n.locale] }}<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
@@ -8,19 +7,10 @@
         <el-dropdown-item
           v-for="lang in $i18n.locales"
           :key="lang.code"
+          :command="lang.code"
         >{{ langMap[lang.code] }}</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-    <!-- $i18n.locale -->
-    <!-- <el-select v-model="$i18n.locale" class="language-select" popper-class="border-0">
-      <el-option
-        v-for="lang in $i18n.locales"
-        :key="lang.code"
-        :label="langMap[lang.code]"
-        :value="lang.code"
-        />
-    </el-select> -->
-  </div>
 </template>
 <script>
 export default {
@@ -31,6 +21,11 @@ export default {
         zhCN: "简体中文",
         enUS: "English"
       }
+    }
+  },
+  methods: {
+    onChange(code) {
+      this.$i18n.locale = code
     }
   }
 }

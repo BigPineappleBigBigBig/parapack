@@ -17,13 +17,14 @@ export default {
     head: {
         script: [{
             innerHTML: `(function(w,d) {function setSize() {
-    var currentFontSize = window.innerWidth * 100 / 1920;
-    d.documentElement.style.fontSize = currentFontSize + 'px';
-  }
-  w.addEventListener('resize',setSize);
-  w.addEventListener('pageShow',setSize)
-  w.addEventListener('DOMContentLoaded',setSize)
-})(window,document)`,
+        var clientWidth = d.documentElement.clientWidth < 1200 ? 1200 : d.documentElement.clientWidth;
+        var currentFontSize = clientWidth / 10;
+        d.documentElement.style.fontSize = currentFontSize + 'px';
+      }
+      w.addEventListener('resize',setSize);
+      w.addEventListener('pageShow',setSize)
+      w.addEventListener('DOMContentLoaded',setSize)
+    })(window,document)`,
             type: 'text/javascript'
         }],
         __dangerouslyDisableSanitizers: ['script', 'noscript']
