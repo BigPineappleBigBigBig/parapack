@@ -17,7 +17,6 @@ export default {
     head: {
         script: [{
             innerHTML: `(function(w,d) {function setSize() {
-    // var screenWidth = window.innerWidth;
     var currentFontSize = window.innerWidth * 100 / 1920;
     d.documentElement.style.fontSize = currentFontSize + 'px';
   }
