@@ -1,16 +1,33 @@
 <template>
-    <div id="main bg-white">
+    <div
+        id="main"
+        class="bg-white min-w-[1200px] max-w-2560px"
+    >
         <v-head ref="head"></v-head>
         <Nuxt />
     </div>
 </template>
 <script>
 import Header from "~/components/Header";
-
 export default {
     name: "Mains",
     components: {
         "v-head": Header,
+    },
+    head: {
+        script: [{
+            innerHTML: `(function(w,d) {function setSize() {
+    // var screenWidth = window.innerWidth;
+    var currentFontSize = window.innerWidth * 100 / 1920;
+    d.documentElement.style.fontSize = currentFontSize + 'px';
+  }
+  w.addEventListener('resize',setSize);
+  w.addEventListener('pageShow',setSize)
+  w.addEventListener('DOMContentLoaded',setSize)
+})(window,document)`,
+            type: 'text/javascript'
+        }],
+        __dangerouslyDisableSanitizers: ['script', 'noscript']
     },
     data: function () {
         return {
@@ -23,8 +40,6 @@ export default {
 <style>
 #main {
     min-height: 100vh;
-    width: 100%;
-    min-width: 1200px;
 }
 .el-message__content {
     display: inline-block;

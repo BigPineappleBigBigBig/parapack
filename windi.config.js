@@ -77,7 +77,7 @@ export default defineConfig({
         'pp-scrollbar': 'scrollbar-thin scrollbar-track-dark-0 scrollbar-thumb-neutral-600 scrollbar-corner-dark-0',
     },
     extract: {
-        include: ['**/*.{vue,js,jsx,tsx,css}'],
+        include: ['**/*.{vue,js,jsx,tsx,css,svelte}'],
         exclude: ['node_modules', '.git', '.nuxt','dist'],
     },
 });
