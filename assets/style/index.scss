@@ -6,6 +6,13 @@
     opacity: 0.7;
   }
 }
+
+.wrap_one{
+  width: 100%;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 // @import "quill/quill.core.css";
 // @import "quill/quill.snow.css";
 // @import "quill/quill.custom.css";

@@ -1,7 +1,7 @@
 <template>
-  <div class="h-[622px]">
-    <div id="footer" class="footer flex w-full h-[543px]">
-      <div class="left_content mr-175px">
+  <div class="h-[532px]">
+    <div id="footer" class="footer flex w-full h-[465px]">
+      <div class="left_content mr-150px">
         <img 
           class="w-[160px] h-auto "
           src="~/assets/images/footer/parapack.png"
@@ -16,16 +16,16 @@
       </div>
 
 
-      <div class="right_content flex pt-105px">
-        <div v-for="(activeLinkGroup , index) in activeLinkList" :key="index" class="w-121px mr-103px">
+      <div class="right_content flex pt-90px">
+        <div v-for="(activeLinkGroup , index) in activeLinkList" :key="index" class="w-104px mr-88px">
           <p class="active_link_title hover_opacity" @click="routerLink(activeLinkGroup.path)">{{ activeLinkGroup.title }}</p>
-          <p class="active_link_text mt-[50px] hover_opacity" v-for="(activeLink, activeLinkIndex) in activeLinkGroup.subList" :key="activeLinkIndex" @click="routerLink(activeLink.path)">{{ activeLink.text }}</p>
+          <p class="active_link_text mt-[43px] hover_opacity" v-for="(activeLink, activeLinkIndex) in activeLinkGroup.subList" :key="activeLinkIndex" @click="routerLink(activeLink.path)">{{ activeLink.text }}</p>
         </div>
       </div>
       
     </div>
 
-    <div class="area w-full h-[79px] pl-[162px]">
+    <div class="area w-full h-[68px] pl-[139px]">
       <p class="area_text">©️2024 PP ParaPack | All Rights Reserved</p>
     </div>
   </div>
@@ -107,25 +107,25 @@ export default {
 .footer{
   background: #00040F;
   color: #AAAAAA;
-  font-size: 18px;
+  font-size: 15px;
 
   .left_content{
-    padding: 125px 0px 0 168px;
+    padding: 107px 0px 0 144px;
     .desc{
-      font-size: 18px;
+      font-size: 15px;
       color: #FFFFFF;
-      line-height: 36px;
+      line-height: 31px;
     }
   }
   .right_content{
     .active_link_title{
-      font-size: 22px;
+      font-size: 19px;
       color: #FFFFFF;
       font-weight: 600;
     }
     .active_link_text{
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 15px;
+      line-height: 15px;
     }
   }
  
@@ -133,9 +133,9 @@ export default {
 .area{
     background: #D8D8D8;
     .area_text{
-      font-size: 18px;
+      font-size: 15px;
       color: #000;
-      line-height: 79px;
+      line-height: 68px;
     }
   }
 </style>

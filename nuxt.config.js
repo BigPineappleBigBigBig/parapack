@@ -143,7 +143,7 @@ export default {
                 },
                 // "postcss-px-to-viewport": {
                 //     unitToConvert: "px", // 默认值`px`，需要转换的单位
-                //     viewportWidth: 1920, // 视窗的宽度,对应设计稿宽度
+                //     viewportWidth: 1920, // 视窗的宽度,对应设计稿宽度 
                 //     //   viewportHeight: 667, // 视窗的高度, 根据375设备的宽度来指定，一般是667，也可不配置
                 //     unitPrecision: 3, // 指定`px`转换为视窗单位值的小数位数
                 //     propList: ["*"], // 转化为vw的属性列表
