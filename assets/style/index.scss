@@ -1,4 +1,11 @@
 @import "base";
+
+.hover_opacity{
+  &:hover{
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
 // @import "quill/quill.core.css";
 // @import "quill/quill.snow.css";
 // @import "quill/quill.custom.css";

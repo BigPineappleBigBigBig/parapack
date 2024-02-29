@@ -5,14 +5,17 @@
     >
         <v-head ref="head"></v-head>
         <Nuxt />
+        <v-footer ref="footer"></v-footer>
     </div>
 </template>
 <script>
 import Header from "~/components/Header";
+import Footer from "~/components/Footer";
 export default {
     name: "Mains",
     components: {
         "v-head": Header,
+        "v-footer": Footer
     },
     head: {
         script: [{

@@ -7,5 +7,10 @@
 <script>
 export default {
   name: "LogoIcon",
+  methods: {
+    link() {
+      
+    }
+  }
 }
 </script>
