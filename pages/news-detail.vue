@@ -1,27 +1,45 @@
 <template>
     <div 
-        class="content_wrapper bg-white w-full text-[#333333] text-18px pl-[100px] pt-[100px] pb-[100px] pr-[100px]" 
-        style="min-height:260px;"
+        class="content_wrapper bg-white w-full text-[#333333] text-[15px] pl-[86px] pt-[86px] pb-[86px] pr-[86px]" 
+        style="min-height:240px;"
     >
         <!-- 详情展示 -->
         <div class="w-full">
-            <div class="border_bottom pb-40px">
-                <p class="text-[36px] font-medium text-[#333333] truncate">{{ detail?.title }}</p>
-                <p class="text-[22px] mt-[30px]">产业资讯</p>
-                <p class="text-[16px] text-[#999999] mt-[40px]">{{ detail?.ctime }}</p>
+            <div class="border_bottom pb-34px">
+                <p class="text-[31px] font-medium text-[#333333] truncate">{{ detail?.title }}</p>
+                <p class="text-[19px] mt-[26px]">产业资讯</p>
+                <p class="text-[14px] text-[#999999] mt-[34px]">{{ detail?.ctime }}</p>
             </div>
             <div 
-                class="mt-[40px]" 
+                class="mt-[40px] rich_text_content" 
                 v-html="richText"
             ></div>
         </div>
 
         <!-- 其他新闻 -->
         <div 
-            class="w-full mt-100px" 
+            class="w-full mt-86px" 
             v-if="othersDetail?.length"
         >
-            <div class="bg-[#FAFAFA] h-100px text-[36px] text-bold">其他新闻</div>
+            <div class="other_new bg-[#FAFAFA] h-86px text-[31px] text-bold mb-51px">其他新闻</div>
+            <div
+                class="other_new_item bg-[#FAFAFA] h-128px text-[15px] mb-34px flex pt-17px pb-26px pl-43px pr-34px justify-between items-center"
+                v-for="(item, index) in othersDetail"
+                :key="index"
+            > 
+                <div class="flex-1 flex items-center">
+                    <div class="date_box">
+                        <p class="text-center text-[31px] text-white font-bold">{{ item.date }}</p>
+                        <p class="text-center text-[15px] text-white mt-12px">{{ item.year }}</p>
+                    </div>
+                    <div class="flex-1 ml-[15px]">
+                        <p class="flex items-center text-[#333333] text-[19px] truncate hover_opacity"> <span class="dot"></span>{{ item.title }}</p>
+                        <p class="w-[619px] truncate text-[#999999] text-[15px] mt-17px hover_opacity ml-[26px]">{{ item.summary }}</p>
+                    </div>
+                </div>
+                <p class="flex items-center w-85px text-[#3B28CC] text-[17px] hover_opacity">查看详情<i class="el-icon-arrow-right text-[16px] text-bold"></i></p>
+            </div>
+
         </div>
     </div>
 </template>
@@ -46,7 +64,9 @@ export default {
     data() {
         return {
             detail: null,
-            othersDetail: []
+            othersDetail: [
+                
+            ]
         };
     },
     computed: {
@@ -64,7 +84,10 @@ export default {
         },
         getOtherNews() {
             // TODO 接口请求其他新闻
-            this.othersDetail = new Array(3).fill({});
+            this.othersDetail = [
+                {year: '2021-01', date: '23', title: '我是标题', summary: '我是摘要'}, 
+                {year: '2021-01', date: '23', title: '我是标题', summary: '我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要我是摘要'}
+            ];
         },
         jumpNewDetail(item) {
             if(!item.id) return;
@@ -76,10 +99,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.big_title{
-padding: 68px 0 20px 20px;
+.other_new{
+  border-radius: 9px;
+  font-weight: bold;
+  padding: 27px;
 }
-
 .border_bottom{
 border-bottom: 1px solid #E0E0E0;
 }
@@ -87,8 +111,30 @@ border-bottom: 1px solid #E0E0E0;
 .content_wrapper{
   overflow: scroll;
 }
-.head_new_item{
-  background: #F6F6F6;
-  border-radius: 10px;
+
+.rich_text_content{
+  img{
+    max-width: 100%!important;
+  }
+}
+
+.other_new_item{
+
+}
+
+.date_box{
+  width: 86px;
+  height: 86px;
+  background: #3B28CC;
+  padding: 14px;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #3B28CC;
+  border-radius: 50%;
+  margin-right: 18px;
 }
 </style>
