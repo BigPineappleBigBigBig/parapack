@@ -9,22 +9,22 @@ export default {
     // 备注背景色
     // 模块/条目点击色
     'pp-bg-1': {
-        '@apply': 'bg-pp-fill dark:bg-pp-fill-dark',
+        '@apply': 'bg-pp-bg dark:bg-pp-bg-dark',
     },
     // 二级背景色
     'pp-bg-2': {
-        '@apply': 'bg-pp-fill-2 dark:bg-pp-fill-2-dark',
+        '@apply': 'bg-pp-bg-2 dark:bg-pp-bg-2-dark',
     },
     // 二级背景色
     'pp-bg-3': {
-        '@apply': 'bg-pp-fill-3 dark:bg-pp-fill-3-dark',
+        '@apply': 'bg-pp-bg-3 dark:bg-pp-bg-3-dark',
     },
     // 三级背景色
     'pp-bg-4': {
-        '@apply': 'bg-pp-fill-4 dark:bg-pp-fill-4-dark',
+        '@apply': 'bg-pp-bg-4 dark:bg-pp-bg-4-dark',
     },
     // 四级背景色
     'pp-bg-5': {
-        '@apply': 'bg-pp-fill-5 dark:bg-pp-fill-5-dark',
+        '@apply': 'bg-pp-bg-5 dark:bg-pp-bg-5-dark',
     },
 };

@@ -60,7 +60,7 @@ export default {
     css: [
         "~assets/style/element-variables.scss",
         "~assets/style/index.scss",
-        "~assets/style/windicss.css",
+        // "~assets/style/windicss.css",
     ],
     plugins,
     buildModules: [
@@ -122,49 +122,32 @@ export default {
         babel: {
             babelrc: true,
         },
-        postcss: {
-            // 添加插件名称作为键，参数作为值
-            plugins: {
-                "postcss-pxtorem": {
-                    //根元素字体大小
-                    rootValue: 192,// 设计稿宽度或者目前正常分辨率的1/10
-                    //匹配CSS中的属性，* 代表启用所有属性
-                    propList: ['*'],
-                    //转换成rem后保留的小数点位数
-                    unitPrecision: 5,
-                    //小于12px的样式不被替换成rem
-                    minPixelValue: 12,
-                    selectorBlackList: ['ignore-','el-'],// 要忽略的选择器并保留为px。
-                    //忽略一些文件，不进行转换，比如我想忽略 依赖的UI框架
-                    exclude: ['node_modules','element-variables.scss']
-                },
-                'postcss-windicss': {
-                    config: '~windi.config.js',
-                },
-                // "postcss-px-to-viewport": {
-                //     unitToConvert: "px", // 默认值`px`，需要转换的单位
-                //     viewportWidth: 1920, // 视窗的宽度,对应设计稿宽度
-                //     //   viewportHeight: 667, // 视窗的高度, 根据375设备的宽度来指定，一般是667，也可不配置
-                //     unitPrecision: 3, // 指定`px`转换为视窗单位值的小数位数
-                //     propList: ["*"], // 转化为vw的属性列表
-                //     viewportUnit: "vw", // 指定需要转换成视窗单位
-                //     fontViewportUnit: "vw", // 字体使用的视窗单位
-                //     selectorBlaskList: [".ignore-"], // 指定不需要转换为视窗单位的类
-                //     mediaQuery: false, // 允许在媒体查询中转换`px`
-                //     minPixelValue: 1, // 小于或等于`1px`时不转换为视窗单位
-                //     replace: true, // 是否直接更换属性值而不添加备用属性
-                //     exclude: [], // 忽略某些文件夹下的文件或特定文件
-                //     landscape: false, // 是否添加根据landscapeWidth生成的媒体查询条件 @media (orientation: landscape)
-                // }
-            },
-            preset: {
-                // 更改postcss-preset-env 设置
-                autoprefixer: {}
-            }
-        },
-        extractCSS: {
-            ignoreOrder: true
-        },
+        // postcss: {
+        //     // 添加插件名称作为键，参数作为值
+        //     plugins: {
+        //         "postcss-pxtorem": {
+        //             //根元素字体大小
+        //             rootValue: 192,// 设计稿宽度或者目前正常分辨率的1/10
+        //             //匹配CSS中的属性，* 代表启用所有属性
+        //             propList: ['*'],
+        //             //转换成rem后保留的小数点位数
+        //             unitPrecision: 5,
+        //             //小于12px的样式不被替换成rem
+        //             minPixelValue: 12,
+        //             selectorBlackList: ['ignore-'],// 要忽略的选择器并保留为px。
+        //             //忽略一些文件，不进行转换，比如我想忽略 依赖的UI框架
+        //             exclude: ['node_modules','element-variables.scss'],
+        //         },
+        //         'postcss-windicss': {
+        //             config: '~windi.config.js',
+        //         },
+        //     },
+        //     preset: {
+        //         // 更改postcss-preset-env 设置
+        //         autoprefixer: {}
+        //     }
+        // },
+        extractCSS: true,
         optimization: {
             splitChunks: {}
         },

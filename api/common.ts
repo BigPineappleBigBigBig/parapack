@@ -1,7 +1,7 @@
-import { post, get } from 'utils/requests';
+import { post, get } from '~/utils/requests';
 
-const getChainInfo = async (): Promise<any> => {
-  const result = await get('/common/chain/info');
+const getNews = async (): Promise<any> => {
+  const result = await post('/news');
   return result;
 };
 
@@ -21,7 +21,7 @@ const getUsdtRate = async (): Promise<any> => {
 };
 
 export {
-  getChainInfo,
+  getNews,
   getGlobalConfig,
   getCurrentDecimals,
   getUsdtRate
