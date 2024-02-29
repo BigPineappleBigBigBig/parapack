@@ -1,5 +1,5 @@
 <template>
-    <el-dropdown trigger="click" @command="onChange">
+    <el-dropdown szie="medium" trigger="click" @command="onChange">
       <span class="cursor-pointer">
         {{ langMap[$i18n.locale] }}<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
@@ -30,12 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-/deep/.language-select {
-  &.el-select .el-input .el-input__inner {
-    border:none;
-    width: max-content;
-  }
-}
-</style>

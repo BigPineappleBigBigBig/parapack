@@ -17,21 +17,21 @@ export default {
         "v-head": Header,
         "v-footer": Footer
     },
-    head: {
-        script: [{
-            innerHTML: `(function(w,d) {function setSize() {
-        var clientWidth = d.documentElement.clientWidth < 1200 ? 1200 : d.documentElement.clientWidth;
-        var currentFontSize = clientWidth / 10;
-        d.documentElement.style.fontSize = currentFontSize + 'px';
-      }
-      w.addEventListener('resize',setSize);
-      w.addEventListener('pageShow',setSize)
-      w.addEventListener('DOMContentLoaded',setSize)
-    })(window,document)`,
-            type: 'text/javascript'
-        }],
-        __dangerouslyDisableSanitizers: ['script', 'noscript']
-    },
+    // head: {
+    //     script: [{
+    //         innerHTML: `(function(w,d) {function setSize() {
+    //     var clientWidth = d.documentElement.clientWidth < 1200 ? 1200 : d.documentElement.clientWidth;
+    //     var currentFontSize = clientWidth / 10;
+    //     d.documentElement.style.fontSize = currentFontSize + 'px';
+    //   }
+    //   w.addEventListener('resize',setSize);
+    //   w.addEventListener('pageShow',setSize)
+    //   w.addEventListener('DOMContentLoaded',setSize)
+    // })(window,document)`,
+    //         type: 'text/javascript'
+    //     }],
+    //     __dangerouslyDisableSanitizers: ['script', 'noscript']
+    // },
     data: function () {
         return {
         };
