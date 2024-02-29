@@ -32,11 +32,11 @@ export default {
         // this.$router.push('/market');
     },
     methods: {
-        onClearEvent: () => {
+        onClearEvent () {
 
         },
-        onChangeEvent: (v) => {
-            
+        onChangeEvent (v) {
+            console.log(v,'搜索内容');
         }
     }
 };

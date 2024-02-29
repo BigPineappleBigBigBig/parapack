@@ -5,7 +5,7 @@
                 :src="require(`@/assets/images/cement.svg`)"
                 class="w-26px h-26px"
             /></dt>
-      <dd class="text-19px pp-text-t1">{{ item.name }}</dd>
+      <dd class="text-18px pp-text-t1">{{ item.name }}</dd>
     </dl>
   </div>
 </template>

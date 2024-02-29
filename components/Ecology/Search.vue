@@ -5,9 +5,9 @@
             placeholder="输入Ddap名称或网址"
             type="text"
             clearable
-            :onInput="onInputChange"
-            :onChange="onChange"
-            :onClear="onClear"
+            @input="onInputChange"
+            @change="onChange"
+            @clear="onClear"
             v-model="value"
         >
         <i slot="prefix" class="el-input__icon el-icon-search text-19px font-bold"></i>
@@ -35,7 +35,7 @@ export default {
         },
     },
     methods: {
-        onInputChange: (v) => {
+        onInputChange (v) {
             debounce(() => {
                 onChange(v);
             }, 300);
