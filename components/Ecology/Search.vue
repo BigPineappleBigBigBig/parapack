@@ -6,8 +6,8 @@
             type="text"
             clearable
             @input="onInputChange"
-            @change="onChange"
-            @clear="onClear"
+            @change="(v) => this.$emit('onChange',v)"
+            @clear="() => this.$emit('onClear')"
             v-model="value"
         >
         <i slot="prefix" class="el-input__icon el-icon-search text-19px font-bold"></i>
@@ -24,22 +24,10 @@ export default {
             value: "",
         };
     },
-    props: {
-        onChange: {
-            type: Function,
-            default: () => {},
-        },
-        onClear: {
-            type: Function,
-            default: () => {},
-        },
-    },
-    methods: {
-        onInputChange (v) {
-            debounce(() => {
-                onChange(v);
+    created() {
+      this.onInputChange = debounce((v) => {
+        this.$emit('onChange',v)
             }, 300);
-        },
     },
 };
 </script>

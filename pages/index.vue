@@ -9,23 +9,31 @@
         <AnnouncementVue/>
         <div class="mt-50px pp-box flex w-full flex-col gap-y-26px">
             <Search
-                :on-change="onChangeEvent"
-                :on-clear="onClearEvent"
+                @onChange="onChangeEvent"
+                @onClear="onClearEvent"
             />
             <Tags/>
         </div>
         <div class="flex pp-box flex-col gap-y-60px py-60px">
-            <BrandListVue
-                :tag="'hot'"
-                title="活动热力榜"
-            />
-            <BrandListVue
-                type="timeType"
-            />
-            <BrandListVue
-                :tag="'new'"
-                title="首发上新生态"
-            />
+            <template v-if="!searchVal">
+                <BrandListVue
+                    :tag="'hot'"
+                    title="活动热力榜"
+                />
+                <BrandListVue
+                    type="timeType"
+                />
+                <BrandListVue
+                    :tag="'new'"
+                    title="首发上新生态"
+                />
+            </template>
+            <template v-else>
+                <BrandListVue
+                    :tag="searchVal"
+                    title="搜索到以下结果"
+                />
+            </template>
         </div>
         <div class="bg-[#F4F4F4]">
             <div class="pp-box pt-52px pb-70px">
@@ -41,7 +49,7 @@
                     >
                         <nuxt-link
                             :to="`/${hrefInfo.href}`"
-                            class="block min-w-267px py-26px text-19px pp-text-primary bg-[#fff] text-center rounded-9px"
+                            class="block min-w-267px py-26px text-19px pp-text-primary bg-[#fff] text-center rounded-9px hover:(0.7)"
                         >
                             {{ hrefInfo.text }}
                         </nuxt-link>
@@ -53,10 +61,10 @@
 </template>
 
 <script>
-import AnnouncementVue from '~/components/Ecology/Announcement.vue';
-import BrandListVue from '~/components/Ecology/BrandList.vue';
-import Search from '~/components/Ecology/Search.vue';
-import Tags from '~/components/Ecology/Tags.vue';
+import AnnouncementVue from '~/components/Ecology/Announcement';
+import BrandListVue from '~/components/Ecology/BrandList';
+import Search from '~/components/Ecology/Search';
+import Tags from '~/components/Ecology/Tags';
 export default {
     layout: 'mains',
     components: {
@@ -87,15 +95,17 @@ export default {
                     text: '条款与条例',
                     href: '/'
                 },
-            ]
+            ],
+            searchVal: '',
         };
     },
     methods: {
         onClearEvent () {
-
+            this.searchVal = '';
         },
         onChangeEvent (v) {
-            console.log(v,'搜索内容');
+            console.log(v,'sdas');
+            this.searchVal = v;
         }
     }
 };
