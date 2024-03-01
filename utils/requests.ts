@@ -25,7 +25,7 @@ const catchError = (e: { response: AxiosResponse }) => {
 
 const apiHost = '';
 export const service = axios.create({
-  baseURL: `${apiHost}/white-lotus-api/v1`,
+  baseURL: `${apiHost}/wallet-app-api`,
   headers: {
     'Content-Type': 'application/json;charset=UTF-8',
   },
@@ -46,7 +46,7 @@ service.interceptors.request.use((request) => {
     request.baseURL = `${url}${baseUrl}`;
   }
   request.headers[HeaderKey.UserToken] = cookie.get(TOKEN_NAME);
-  request.headers.lang = cookie.get(LOCALES_NAME);
+  request.headers['wallet-language'] = window && window.$nuxt.$i18n.locale;
   return request;
 });
 service.interceptors.response.use(

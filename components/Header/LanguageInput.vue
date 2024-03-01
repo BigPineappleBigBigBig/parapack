@@ -13,19 +13,21 @@
     </el-dropdown>
 </template>
 <script>
+import Cookies from 'js-cookie';
+
 export default {
   name: "LanguageInput",
   data: function () {
     return {
       langMap: {
-        zhCN: "简体中文",
-        enUS: "English"
+        zh_CN: "简体中文",
+        en_US: "English"
       }
     }
   },
   methods: {
     onChange(code) {
-      this.$i18n.locale = code
+      this.$i18n.locale = code;
     }
   }
 }

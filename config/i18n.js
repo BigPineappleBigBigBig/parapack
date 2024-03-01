@@ -1,7 +1,7 @@
-import enUS from '../lang/en-US.json';
-import zhCN from '../lang/zh-CN.json';
+import en_US from '../lang/en-US.json';
+import zh_CN from '../lang/zh-CN.json';
 export default {
-    locale: 'zhCN',
-    fallbackLocale: 'zhCN',
-    messages: { enUS, zhCN }
+    locale: 'zh_CN',
+    fallbackLocale: 'zh_CN',
+    messages: { en_US, zh_CN }
 };

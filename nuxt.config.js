@@ -77,13 +77,13 @@ export default {
             '@nuxtjs/i18n',
             {
                 locales: [
-                    { code: 'zhCN', iso: 'zh-CN', file: 'zh-CN.json'},
-                    { code: 'enUS', iso: 'en-US', file: 'en-US.json'}
+                    { code: 'zh_CN', iso: 'zh-CN', file: 'zh-CN.json'},
+                    { code: 'en_US', iso: 'en-US', file: 'en-US.json'}
                 ],
                 vueI18nLoader: true,
                 lazy: true,
                 langDir: 'lang/',
-                defaultLocale: 'zhCN',
+                defaultLocale: 'zh_CN',
                 vueI18n: i18n
             }
         ]
@@ -194,14 +194,14 @@ export default {
         }
     },
     proxy: {
-        "/test": {
-            target: BASE_URL,
-            ws: false,	// 是否代理 websocket
-            pathRewrite: {"^/test" : ""}, // 'http://www.baidu.com:8000/api' 重写为 'http://www.baidu.com:8000/'
-            changeOrigin: true, // 代理时不显示主机头的真实来源
-            secure: false, // 不验证 https 证书
-        },
-        "/nft-market": MARKET_URL,
+        // "/test": {
+        //     target: BASE_URL,
+        //     ws: false,	// 是否代理 websocket
+        //     // pathRewrite: {"^/test" : ""}, // 'http://www.baidu.com:8000/api' 重写为 'http://www.baidu.com:8000/'
+        //     changeOrigin: true, // 代理时不显示主机头的真实来源
+        //     secure: false, // 不验证 https 证书
+        // },
+        "/wallet-app-api": BASE_URL,
         "/nft-mall-web": BASE_URL,
     },
 };
