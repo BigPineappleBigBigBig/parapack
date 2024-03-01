@@ -5,6 +5,12 @@ const getBrandList = async (data:any): Promise<any> => {
   return result;
 };
 
+const getTags = async (): Promise<any> => {
+  const result = await post('/tags');
+  return result;
+};
+
 export {
   getBrandList,
+  getTags
 };

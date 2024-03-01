@@ -45,8 +45,8 @@ service.interceptors.request.use((request) => {
     const { url, baseUrl } = BASE_URL[siteName]; // BASE_URL['@open']
     request.baseURL = `${url}${baseUrl}`;
   }
-  request.headers[HeaderKey.UserToken] = cookie.get(TOKEN_NAME);
-  request.headers['wallet-language'] = window && window.$nuxt.$i18n.locale;
+  // request.headers[HeaderKey.UserToken] = cookie.get(TOKEN_NAME);
+  request.headers['wallet-language'] = process.browser && window.$nuxt.$i18n.locale;
   return request;
 });
 service.interceptors.response.use(
