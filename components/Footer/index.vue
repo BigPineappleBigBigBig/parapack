@@ -65,8 +65,8 @@ export default {
         },
         {
           title:'视频',
-          path: '',
-          subList: [{text: '视频教程', path: 'news-list'},{text: '视频合作', path: 'news-list'},{text: '创作中心', path: 'news-list'}],
+          path: 'video',
+          subList: [{text: '视频教程', path: 'video'},{text: '视频合作', path: 'video'},{text: '创作中心', path: 'news-list'}],
         },
         {
           title:'活动',
