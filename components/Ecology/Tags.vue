@@ -36,7 +36,7 @@ export default {
     },
     methods: {
       toDetail(item) {
-        this.$router.push(`/ecology/detail?t=${item.tag}`)
+        this.$router.push(`/ecology/list?t=${item.tag}`)
       },
       async fetchData() {
             const { code, msg, data } = await getTags();

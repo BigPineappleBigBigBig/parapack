@@ -1,16 +1,16 @@
 <template>
-  <dl class="w-full flex gap-x-14px border-b-1px border-[#F5F5F5] pb-10px">
-    <dt>
+  <dl class="w-full flex border-b-1px border-[#F5F5F5] pb-10px cursor-pointer" @click="toDetail">
+    <dt class="w-74px h-74px mr-14px">
       <img
-                :src="require(`@/assets/images/cement.svg`)"
-                class="w-74px h-74px rounded-full"
+                :src="data.miniCoverPicture"
+                class="w-full h-full rounded-full"
             />
     </dt>
-    <dd class="flex flex-col gap-y-14px w-full justify-center">
+    <dd class="flex flex-col flex-1 w-0 pt-10px pb-15px">
       <p class="text-19px pp-text-t1">{{ data.title }}</p>
-      <p class="truncate w-full text-15px text-[#999999]">
+      <div class="truncate flex-1 text-15px text-[#999999] mt-14px">
         {{ data.summary }}
-      </p>
+      </div>
     </dd>
   </dl>
 </template>
@@ -28,6 +28,11 @@ export default {
           miniCoverPicture: '',
         }
     }
+  },
+  methods: {
+    toDetail() {
+            this.$router.push(`/ecology/detail?id=${this.data.id}`);
+        },
   }
 }
 </script>
