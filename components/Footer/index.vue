@@ -1,7 +1,7 @@
 <template>
   <div class="h-[532px]">
     <div id="footer" class="footer flex w-full h-[465px] pp-box">
-      <div class="left_content mr-150px">
+      <div class="left_content mr-100px">
         <img 
           class="w-[160px] h-auto "
           src="~/assets/images/footer/parapack.png"

@@ -22,7 +22,7 @@ export default {
             menu: [
                 {
                     title: "生态",
-                    name: "/",
+                    name: "/ecology",
                 },
                 {
                     title: "视频",
