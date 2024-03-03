@@ -16,8 +16,8 @@
       </div>
 
 
-      <div class="right_content flex pt-90px">
-        <div v-for="(activeLinkGroup , index) in activeLinkList" :key="index" class="w-104px mr-88px">
+      <div class="right_content flex-1 flex pt-90px inline-grid grid-cols-5 auto-cols-fr">
+        <div v-for="(activeLinkGroup , index) in activeLinkList" :key="index" class="auto-cols-fr">
           <p class="active_link_title hover_opacity" @click="routerLink(activeLinkGroup.path)">{{ activeLinkGroup.title }}</p>
           <p class="active_link_text mt-[43px] hover_opacity" v-for="(activeLink, activeLinkIndex) in activeLinkGroup.subList" :key="activeLinkIndex" @click="routerLink(activeLink.path)">{{ activeLink.text }}</p>
         </div>
@@ -25,7 +25,7 @@
       
     </div>
 
-    <div class="area w-full h-[68px] pl-[139px]">
+    <div class="area w-full h-[68px] pl-[58px]">
       <p class="area_text">©️2024 PP ParaPack | All Rights Reserved</p>
     </div>
   </div>
@@ -110,7 +110,7 @@ export default {
   font-size: 15px;
 
   .left_content{
-    padding: 107px 0px 0 144px;
+    padding: 107px 0 0 58px;
     .desc{
       font-size: 15px;
       color: #FFFFFF;

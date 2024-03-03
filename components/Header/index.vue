@@ -1,5 +1,5 @@
 <template>
-  <div id='header'  class="sticky bg-white top-0 z-9000 h-[120px] w-full">
+  <div id='header'  class="sticky bg-white top-0 z-60 h-[120px] w-full">
     <div class='pp-box w-full h-full flex items-center justify-between pp-text-t2'>
       <LogoIcon></LogoIcon>
           <div class="flex justify-between items-center gap-x-86px">

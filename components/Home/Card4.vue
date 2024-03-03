@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="bg-white w-full content_wrapper h-[466px] flex items-center mt-90px pl-183px pr-157px">    
+      <div class="bg-white w-full content_wrapper h-[466px] flex items-center mt-90px pp-box">    
           <img src="~/assets/images/home/left.png" class="w-[350px] mr-[292px] ml-[100px]"/>
           <div> 
             <p class="text-[51px] text-[#333333] font-semibold">活动中心</p>
@@ -34,7 +34,7 @@
           </div>
       </div>
 
-      <div class="bg-white w-full content_wrapper h-[466px] flex items-center pl-183px pr-157px mt_100px">    
+      <div class="bg-white w-full content_wrapper h-[466px] flex items-center pp-box mt_100px">    
           <div> 
             <p class="text-[51px] text-[#333333] font-semibold">视频工具</p>
             <p class="mt-22px text-[#676968] text-[17px]">随时随地观看各个国家奇闻趣事</p>

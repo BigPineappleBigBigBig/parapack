@@ -336,3 +336,20 @@ export function deepClone(obj) {
     return res;
 }
 
+export const getNumberClass = (value) => {
+    const Num = Number(value);
+    if (Number.isNaN(Num)) {
+        return 'pp-text-t1';
+    }
+    if (Num > 0 && Num < 0.01) {
+        return 'pp-text-t1';
+    }
+    if (Num > 0) {
+        return 'text-[#25AC4E]';
+    }
+    if (Num < 0) {
+        return 'text-red';
+    }
+    return 'pp-text-t1';
+};
+

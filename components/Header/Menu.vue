@@ -2,7 +2,7 @@
     <div class="flex h-[53px] gap-x-86px">
         <template v-for="itemMenu in menu">
         <li
-            :class="`text-15px h-full flex items-center justify-center hover:(pp-text-primary font-600) ${activeRoute === itemMenu.name ? 'pp-text-primary font-600' : ''}`"
+            :class="`text-15px h-full flex items-center justify-center hover:(pp-text-primary font-600) ${activeRoute.includes(itemMenu.name) && activeRoute !== '/' ? 'pp-text-primary font-600' : ''}`"
             :key="itemMenu.name"
         >
             <nuxt-link :to="itemMenu.name">

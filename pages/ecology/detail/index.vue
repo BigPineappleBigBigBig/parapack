@@ -1,9 +1,22 @@
 <template>
     <div>
-        <div :class="`pt-34px pb-86px ${loading ? 'min-h-500px' : ''}`" v-loading="loading">
-            <div class="pp-box" v-if="data && !loading">
+        <div
+            :class="`pt-34px pb-86px ${loading ? 'min-h-500px' : ''}`"
+            v-loading="loading"
+        >
+            <div
+                class="pp-box"
+                v-if="data && !loading"
+            >
                 <Info :data="data"></Info>
                 <Chart />
+                <div class="mt-100px mb-60px">
+                    <img
+                        class="w-full h-auto"
+                        src="~/assets/images/ecologyTip.jpg"
+                    />
+                </div>
+                <News></News>
             </div>
         </div>
         <MoreList />
@@ -14,34 +27,27 @@ import { getBrandList } from "~/api";
 import MoreList from "~/components/Ecology/MoreList";
 import Info from "@/components/Ecology/Detail/Info";
 import Chart from "@/components/Ecology/Detail/Chart";
+import News from "@/components/Ecology/Detail/News";
 export default {
     layout: "mains",
     name: "EcologyDetail",
     components: {
         MoreList,
         Info,
-        Chart
+        Chart,
+        News
     },
-    computed: {
-        id() {
-            return this.$route.query.id;
-        },
-    },
+
     data: () => {
         return {
             data: undefined,
             loading: true,
         };
     },
-    computed: {
-        medium() {
-            return this.data.medium ? JSON.parse(this.data.medium) : {};
-        },
-    },
     watch: {
         "$i18n.locale": {
             handler(v) {
-                v && this.fetchData();
+                v && this.$route.query.id && this.fetchData();
             },
             immediate: true,
         },
@@ -50,7 +56,7 @@ export default {
         async fetchData() {
             this.loading=true;
             const { code, msg, data } = await getBrandList({
-                id: this.id,
+                id: this.$route.query.id,
             });
             this.loading=false;
             if (code === 200) {
