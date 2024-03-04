@@ -336,20 +336,20 @@ export function deepClone(obj) {
     return res;
 }
 
-export const getNumberClass = (value) => {
+export const getNumberClass = (value,type='text') => {
     const Num = Number(value);
     if (Number.isNaN(Num)) {
-        return 'pp-text-t1';
+        return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
     }
     if (Num > 0 && Num < 0.01) {
-        return 'pp-text-t1';
+        return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
     }
     if (Num > 0) {
-        return 'text-[#25AC4E]';
+        return type==='text' ? 'text-[#25AC4E]' : 'border-[#25AC4E]';
     }
     if (Num < 0) {
-        return 'text-red';
+        return type==='text' ? 'text-red' : 'border-red';
     }
-    return 'pp-text-t1';
+    return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
 };
 

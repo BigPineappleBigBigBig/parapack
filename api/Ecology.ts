@@ -10,7 +10,13 @@ const getTags = async (): Promise<any> => {
   return result;
 };
 
+const getKline = async (): Promise<any> => {
+  const result = await post('/symbol/kline');
+  return result;
+};
+
 export {
   getBrandList,
-  getTags
+  getTags,
+  getKline
 };

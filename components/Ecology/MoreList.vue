@@ -35,15 +35,15 @@ export default {
                 },
                 {
                     text: '报告问题',
-                    href: '/'
+                    href: '/sa'
                 },
                 {
                     text: '开发者入驻规则及协议',
-                    href: '/'
+                    href: '/aaa'
                 },
                 {
                     text: '条款与条例',
-                    href: '/'
+                    href: '/aaas'
                 },
             ],
     }

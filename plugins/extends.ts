@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import {BannerType, ContentType, OsType, VersionUpdateEnum } from "~/interface/app";
-
 enum ColorTagEnum {
     Album = '#6067FF',
     Mbox = '#FF9261',

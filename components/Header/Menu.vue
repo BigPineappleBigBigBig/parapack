@@ -26,7 +26,7 @@ export default {
                 },
                 {
                     title: "视频",
-                    name: "/vodio",
+                    name: "/vodeo",
                 },
                 {
                     title: "活动",
