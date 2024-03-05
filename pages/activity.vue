@@ -18,14 +18,20 @@
         </p>
 
         <div class="flex items-center justify-center mt-[26px]">
-            <div class="flex text-white text-[15px] mr-[111px] border_bottom pb-5px hover_opacity">
+            <div 
+                class="flex text-white text-[15px] mr-[111px] border_bottom pb-5px hover_opacity"
+                @click="downloadApp"
+            >
                 <img 
                     src="~/assets/images/activity/download.svg" 
                     class="w-17px"
                 />
                 下载APP
             </div>
-            <div class="flex text-white text-[15px] border_bottom pb-5px hover_opacity">
+            <div 
+                class="flex text-white text-[15px] border_bottom pb-5px hover_opacity"
+                @click="downloadPlugin"
+            >
                 <img 
                     src="~/assets/images/activity/pintu.svg" 
                     class="w-17px"
@@ -44,6 +50,14 @@ export default {
         return {
         };
     },
+    methods: {
+        downloadApp() {
+            this.$toast('敬请期待！');
+        },
+        downloadPlugin() {
+            this.$toast('敬请期待！');
+        }
+    }
 };
 </script>
 

@@ -23,7 +23,7 @@
                 loop
             >
                 <el-carousel-item v-for="item in list" :key="item.id">
-                    <nuxt-link :to="`/${item.id}`" class="block text-15px pp-text-t1 h-15px hover:(pp-text-primary)">
+                    <nuxt-link :to="`/news-detail?id=${item.id}`" class="block text-15px pp-text-t1 h-15px hover:(pp-text-primary)">
                         {{ item.title }}
                     </nuxt-link>
                 </el-carousel-item>
@@ -31,10 +31,13 @@
         </div>
     </div>
     <div class="cursor-pointer w-20px h-20px">
-      <img
+        <nuxt-link :to="`/news-list`">
+            <img
                 :src="require(`@/assets/images/arrowRight.svg`)"
                 class="w-9px h-[auto]"
             />
+        </nuxt-link>
+      
     </div>
   </div>
   </div>

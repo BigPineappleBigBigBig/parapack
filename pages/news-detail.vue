@@ -74,7 +74,7 @@ export default {
         richText(data) {
             const content = data.detail?.content;
             // TODO img最宽宽度限制 style="max-width:100%;height:auto"
-            return content?.replace(/\<img/gi, '<img');
+            return content?.replace(/\<img/gi, '<img style="width:100%;height:auto"');
         }
     },
     watch: {
@@ -133,10 +133,8 @@ border-bottom: 1px solid #E0E0E0;
   overflow: scroll;
 }
 
-.rich_text_content{
-  img{
+.rich_text_content img{
     width: 100%!important;
-  }
 }
 
 .other_new_item{
