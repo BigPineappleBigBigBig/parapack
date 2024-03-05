@@ -5,7 +5,7 @@
         <Card2 />
         <Card3 />
         <Card4 />
-        <Card5 />
+        <!-- <Card5 /> -->
         <Card6 />
     </div>
 </template>
@@ -26,7 +26,7 @@ export default {
         Card2,
         Card3,
         Card4,
-        Card5,
+        // Card5,
         Card6
     },
     async created() {

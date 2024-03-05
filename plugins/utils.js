@@ -1,5 +1,9 @@
 import {fix, mul} from '@/utils/math';
 import Cookies from 'js-cookie';
+import mergeWith from 'lodash-es/mergeWith';
+import unionWith from 'lodash-es/unionWith';
+import isEqual from 'lodash-es/isEqual';
+import intersectionWith from 'lodash-es/intersectionWith';
 import {SUB_USER_ID} from "~/config/app";
 const SUBUSERID = SUB_USER_ID;
 
@@ -625,4 +629,45 @@ export function formatHeader (){
 export const clearLoginStatus = () => {
     Cookies.remove("token");
     localStorage.removeItem("USER_INFO");
+};
+
+export function isArray(val) {
+    return val && Array.isArray(val);
+}
+
+export function isObject(val) {
+    return val !== null && toString.call(val) === '[object Object]';
+}
+
+export const deepMerge = (
+    source,
+    target,
+    mergeArrays = 'replace'
+) => {
+    if (!target) {
+        return source;
+    }
+    if (!source) {
+        return target;
+    }
+    return mergeWith({}, source, target, (sourceValue, targetValue) => {
+        if (isArray(targetValue) && isArray(sourceValue)) {
+            switch (mergeArrays) {
+                case 'union':
+                    return unionWith(sourceValue, targetValue, isEqual);
+                case 'intersection':
+                    return intersectionWith(sourceValue, targetValue, isEqual);
+                case 'concat':
+                    return sourceValue.concat(targetValue);
+                case 'replace':
+                    return targetValue;
+                default:
+                    throw new Error(`Unknown merge array strategy: ${mergeArrays}`);
+            }
+        }
+        if (isObject(targetValue) && isObject(sourceValue)) {
+            return Utils.deepMerge(sourceValue, targetValue, mergeArrays);
+        }
+        return undefined;
+    });
 };

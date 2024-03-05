@@ -103,7 +103,7 @@ export default {
             if (code === 200) {
                 this.dataList = [...data.lists.slice(0, 6)];
             } else {
-                Message.error(msg);
+                essage.error(msg);
             }
         },
     },

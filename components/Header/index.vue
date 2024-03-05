@@ -5,7 +5,7 @@
           <div class="flex justify-between items-center gap-x-86px">
             <Menu></Menu>
             <div class="flex gap-x-34px items-center">
-              <el-button type="primary" class="pp-btn-17-l">登录/注册</el-button>
+              <!-- <el-button type="primary" class="pp-btn-17-l">登录/注册</el-button> -->
               <LanguageInput></LanguageInput>
             </div>
           </div>

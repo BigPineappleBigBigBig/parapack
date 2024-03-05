@@ -2,6 +2,7 @@
 // import 'moment-timezone';
 import { extend } from './extend';
 import { json2search } from './json2search';
+import {fix} from '@/utils/math';
 
 export function isPrd() {
     if (process.server) {
@@ -336,21 +337,33 @@ export function deepClone(obj) {
     return res;
 }
 
-export const getNumberClass = (value) => {
+export const getNumberClass = (value,type='text') => {
     const Num = Number(value);
     if (Number.isNaN(Num)) {
-        return 'pp-text-t1';
+        return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
     }
     if (Num > 0 && Num < 0.01) {
-        return 'pp-text-t1';
+        return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
     }
     if (Num > 0) {
-        return 'text-[#25AC4E]';
+        return type==='text' ? 'text-[#25AC4E]' : 'border-[#25AC4E]';
     }
     if (Num < 0) {
-        return 'text-red';
+        return type==='text' ? 'text-red' : 'border-red';
     }
-    return 'pp-text-t1';
+    return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
+};
+const pricisionZero = (pricision) => (pricision > 0 ? `0.${Array(pricision).fill(0).join('')}` : '0');
+
+export const formatNumber = (value, pricision = 2, prefix) => {
+    if (prefix) {
+        if (Number(value)> 0) {
+            return `+${fix(value, pricision)}`;
+        }
+    }
+    return fix(value, pricision).toString() === '0'
+        ? pricisionZero(pricision)
+        : fix(value, pricision);
 };
 
 export const formatData = (timer) => {

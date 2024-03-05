@@ -63,7 +63,7 @@ export default {
     name: "News",
     props: {
         data: {
-            default: {},
+            default: () => {return{}},
             typeof: Object,
         },
     },

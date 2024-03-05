@@ -33,17 +33,17 @@ export default {
                     text: '关于 ParaPack',
                     href: '/'
                 },
-                {
-                    text: '报告问题',
-                    href: '/'
-                },
+                // {
+                //     text: '报告问题',
+                //     href: '/sa'
+                // },
                 {
                     text: '开发者入驻规则及协议',
-                    href: '/'
+                    href: '/aaa'
                 },
                 {
                     text: '条款与条例',
-                    href: '/'
+                    href: '/aaas'
                 },
             ],
     }

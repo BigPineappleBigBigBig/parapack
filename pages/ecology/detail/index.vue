@@ -9,7 +9,7 @@
                 v-if="data && !loading"
             >
                 <Info :data="data"></Info>
-                <Chart />
+                <Chart :data="data"/>
                 <div class="mt-100px mb-60px">
                     <img
                         class="w-full h-auto"
