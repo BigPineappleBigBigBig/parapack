@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[532px]">
+  <!-- <div class="h-[532px]">
     <div id="footer" class="footer flex w-full h-[465px] pp-box justify-between">
       <div class="left_content">
         <img 
@@ -28,7 +28,10 @@
     <div class="area w-full h-[68px] pl-[58px]">
       <p class="area_text">©️2024 PP ParaPack | All Rights Reserved</p>
     </div>
-  </div>
+  </div> -->
+
+  <div class="h-[532px]" data-v-02d89339><div id="footer" class="footer flex w-full h-[465px] pp-box justify-between" data-v-02d89339><div class="left_content" data-v-02d89339><img src="/_nuxt/assets/images/footer/parapack.png" class="w-[160px] h-auto" data-v-02d89339><p class="desc mt-20px w-433px" data-v-02d89339>全球生态活动聚合平台.</p><p class="desc" data-v-02d89339>Global Ecosystem Activity Aggregation Platform</p><div class="flex" data-v-02d89339><div data-v-02d89339><img src="/_nuxt/assets/images/footer/1.png" class="w-[60px] h-[60px] mr-[30px] mt-[40px] hover_opacity" data-v-02d89339></div><div data-v-02d89339><img src="/_nuxt/assets/images/footer/2.png" class="w-[60px] h-[60px] mr-[30px] mt-[40px] hover_opacity" data-v-02d89339></div><div data-v-02d89339><img src="/_nuxt/assets/images/footer/3.png" class="w-[60px] h-[60px] mr-[30px] mt-[40px] hover_opacity" data-v-02d89339></div><div data-v-02d89339><img src="/_nuxt/assets/images/footer/4.png" class="w-[60px] h-[60px] mr-[30px] mt-[40px] hover_opacity" data-v-02d89339></div></div></div><div class="right_content flex-1 flex pt-90px inline-grid grid-cols-5 auto-cols-fr" data-v-02d89339><div class="auto-cols-fr" data-v-02d89339><p class="active_link_title hover_opacity" data-v-02d89339>首页</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>公告资讯</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>生态商店</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>提交生态</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>ParaPack钱包</p></div><div class="auto-cols-fr" data-v-02d89339><p class="active_link_title hover_opacity" data-v-02d89339>视频</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>视频教程</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>视频合作</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>创作中心</p></div><div class="auto-cols-fr" data-v-02d89339><p class="active_link_title hover_opacity" data-v-02d89339>活动</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>活动教程</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>活动发布</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>活动参与</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>活动中心</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>联合空投</p></div><div class="auto-cols-fr" data-v-02d89339><p class="active_link_title hover_opacity" data-v-02d89339>开发者</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>开发者申请</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>开发者中心</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>开发者协议</p></div><div class="auto-cols-fr" data-v-02d89339><p class="active_link_title hover_opacity" data-v-02d89339>支持</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>关于ParaPack</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>隐私政策</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>服务协议</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>合作伙伴</p><p class="active_link_text mt-[43px] hover_opacity" data-v-02d89339>联系ParaPack</p></div></div></div><div class="area w-full h-[68px] pl-[58px]" data-v-02d89339><p class="area_text" data-v-02d89339>©️2024 PP ParaPack | All Rights Reserved</p></div></div>
+
 </template>
 
 <script>
@@ -39,51 +42,51 @@ export default {
   },
   data() {
     return {
-      iconList: [
-        {
-          src: require('~/assets/images/footer/1.png'),
-          path: ''
-        },
-        {
-          src: require('~/assets/images/footer/2.png'),
-          path: ''
-        },
-        {
-          src: require('~/assets/images/footer/3.png'),
-          path: ''
-        },
-        {
-          src: require('~/assets/images/footer/4.png'),
-          path: ''
-        }
-      ],
-      activeLinkList: [
-        {
-          title:'首页',
-          path: '',
-          subList: [{text: '公告资讯', path: 'news-list'},{text: '生态商店', path: 'news-list'},{text: '提交生态', path: 'news-list'},{text: 'ParaPack钱包', path: 'news-list'}, ],
-        },
-        {
-          title:'视频',
-          path: 'video',
-          subList: [{text: '视频教程', path: 'video'},{text: '视频合作', path: 'video'},{text: '创作中心', path: 'news-list'}],
-        },
-        {
-          title:'活动',
-          path: '',
-          subList: [{text: '活动教程', path: 'news-list'},{text: '活动发布', path: 'news-list'},{text: '活动参与', path: 'news-list'},{text: '活动中心', path: 'news-list'},{text: '联合空投', path: 'news-list'}, ],
-        },
-        {
-          title:'开发者',
-          path: '',
-          subList: [{text: '开发者申请', path: 'news-list'},{text: '开发者中心', path: 'news-list'},{text: '开发者协议', path: 'news-list'}],
-        },
-        {
-          title:'支持',
-          path: '',
-          subList: [{text: '关于ParaPack', path: 'news-list'},{text: '隐私政策', path: 'news-list'},{text: '服务协议', path: 'news-list'}, {text: '合作伙伴', path: 'news-list'},{text: '联系ParaPack', path: 'news-list'}],
-        },
-      ]
+      // iconList: [
+      //   {
+      //     src: require('~/assets/images/footer/1.png'),
+      //     path: ''
+      //   },
+      //   {
+      //     src: require('~/assets/images/footer/2.png'),
+      //     path: ''
+      //   },
+      //   {
+      //     src: require('~/assets/images/footer/3.png'),
+      //     path: ''
+      //   },
+      //   {
+      //     src: require('~/assets/images/footer/4.png'),
+      //     path: ''
+      //   }
+      // ],
+      // activeLinkList: [
+      //   {
+      //     title:'首页',
+      //     path: '',
+      //     subList: [{text: '公告资讯', path: 'news-list'},{text: '生态商店', path: 'news-list'},{text: '提交生态', path: 'news-list'},{text: 'ParaPack钱包', path: 'news-list'}, ],
+      //   },
+      //   {
+      //     title:'视频',
+      //     path: 'video',
+      //     subList: [{text: '视频教程', path: 'video'},{text: '视频合作', path: 'video'},{text: '创作中心', path: 'news-list'}],
+      //   },
+      //   {
+      //     title:'活动',
+      //     path: '',
+      //     subList: [{text: '活动教程', path: 'news-list'},{text: '活动发布', path: 'news-list'},{text: '活动参与', path: 'news-list'},{text: '活动中心', path: 'news-list'},{text: '联合空投', path: 'news-list'}, ],
+      //   },
+      //   {
+      //     title:'开发者',
+      //     path: '',
+      //     subList: [{text: '开发者申请', path: 'news-list'},{text: '开发者中心', path: 'news-list'},{text: '开发者协议', path: 'news-list'}],
+      //   },
+      //   {
+      //     title:'支持',
+      //     path: '',
+      //     subList: [{text: '关于ParaPack', path: 'news-list'},{text: '隐私政策', path: 'news-list'},{text: '服务协议', path: 'news-list'}, {text: '合作伙伴', path: 'news-list'},{text: '联系ParaPack', path: 'news-list'}],
+      //   },
+      // ]
     }
   },
   mounted: function () {
