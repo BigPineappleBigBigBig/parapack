@@ -77,13 +77,12 @@ export default {
         [
             '@nuxtjs/i18n',
             {
+                strategy: 'prefix',
                 locales: [
-                    { code: 'zh_CN', iso: 'zh-CN', file: 'zh-CN.json'},
-                    { code: 'en_US', iso: 'en-US', file: 'en-US.json'}
+                    { code: 'zh_CN', name: '简体中文'},
+                    { code: 'en_US', name: 'English'}
                 ],
                 vueI18nLoader: true,
-                lazy: true,
-                langDir: 'lang/',
                 defaultLocale: 'zh_CN',
                 vueI18n: i18n
             }

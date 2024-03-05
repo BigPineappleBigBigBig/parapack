@@ -45,6 +45,7 @@
 
 <script>
 import { getNews } from "@/api";
+import {localePath} from '@nuxtjs/i18n'
 export default {
     name: "Announcement",
     data: () => {
@@ -57,6 +58,7 @@ export default {
       this.fetchData();
     },
     methods: {
+        localePath,
         async fetchData() {
             const { code, msg, data } = await getNews({
                 pageNum: this.pageNum,
