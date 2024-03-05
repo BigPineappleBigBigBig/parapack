@@ -16,11 +16,17 @@
     </p>
 
     <div class="flex items-center justify-center mt-[26px]">
-        <div class="flex text-[#333333] text-[15px] mr-[111px] border_bottom pb-5px">
+        <div 
+            class="flex text-[#333333] text-[15px] mr-[111px] border_bottom pb-5px hover_opacity"
+            @click="downloadApp"
+        >
             <img src="~/assets/images/home/64.svg" class="w-17px"/>
             {{$t('下载APP')}}
         </div>
-        <div class="flex text-[#333333] text-[15px] border_bottom pb-5px">
+        <div 
+            class="flex text-[#333333] text-[15px] border_bottom pb-5px hover_opacity"
+            @click="downloadPlugin"
+        >
             <img src="~/assets/images/home/65.svg" class="w-17px"/>
             {{$t('下载插件')}}
         </div>
@@ -37,6 +43,14 @@ export default {
         return {
         };
     },
+    methods: {
+      downloadApp() {
+        this.$toast('敬请期待！')
+      },
+      downloadPlugin() {
+        this.$toast('敬请期待！')
+      }
+    }
 };
 </script>
 

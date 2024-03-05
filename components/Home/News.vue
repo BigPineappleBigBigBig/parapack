@@ -22,7 +22,7 @@
                   loop
               >
                   <el-carousel-item v-for="item in list" :key="item.id">
-                      <nuxt-link :to="`/${item.id}`" class="block text-15px text-[#3B28CC] h-15px hover:(pp-text-primary)">
+                      <nuxt-link :to="`/news-detail?id=${item.id}`" class="block text-15px text-[#3B28CC] h-15px hover:(pp-text-primary)">
                           {{ item.title }}
                       </nuxt-link>
                   </el-carousel-item>
@@ -30,12 +30,15 @@
           </div>
       </div>
       <!-- 更多 -->
-      <div class="cursor-pointer flex items-center">
-          <p class="text-[#3B28CC] text-[15px]">更多</p>
-          <i
-              class="el-icon-arrow-right text-[15px] text-[#3B28CC] text-bold"
-          ></i>
-      </div>
+      
+      <nuxt-link :to="`/news-list`" >
+          <div class="cursor-pointer flex items-center hover_opacity">
+            <p class="text-[#3B28CC] text-[15px]">更多</p>
+            <i
+                class="el-icon-arrow-right text-[15px] text-[#3B28CC] text-bold"
+            ></i>
+          </div>
+      </nuxt-link>
   </div>
 </template>
 
