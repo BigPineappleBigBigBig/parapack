@@ -2,9 +2,9 @@
   <div class="w-full bg-[#3B28CC] content_wrapper h-[377px] pl-[210px] pr-[210px]">    
     <p  class="text-center pt-88px">
         <span class="text-26px text-white mr-[5px] font-medium">ParaPack</span>
-        <span class="text-31px text-white font-medium">深受全球用户信赖</span>
+        <span class="text-31px text-white font-medium">{{$t('深受全球用户信赖')}}</span>
     </p>  
-    <p class="text-[#AAAAAA] text-[15px] mt-15px text-center">我们为全球200多个国家及地区的用户提供安全易用的服务</p>
+    <p class="text-[#AAAAAA] text-[15px] mt-15px text-center">{{$t('我们为全球200多个国家及地区的用户提供安全易用的服务')}}</p>
     <div class="flex items-center justify-between mt-51px">
 
       <div 
@@ -34,27 +34,27 @@
 <script>
 export default {
     name: "Announcement",
-    data: () => {
-        return {
-          iconList: [
+    computed: {
+      iconList() { 
+        return [
             {
               img: require(`@/assets/images/home/card2-1.png`),
-              title: '服务用户',
+              title: this.$t('服务用户'),
               descImage: require(`@/assets/images/home/20M.png`)
             },
             {
               img: require(`@/assets/images/home/card2-2.png`),
-              title: '日均交易数',
+              title: this.$t('日均交易数'),
               descImage: require(`@/assets/images/home/30M.png`)
             },
             {
               img: require(`@/assets/images/home/card2-3.png`),
-              title: '国家及地区',
+              title: this.$t('国家及地区'),
               descImage: require(`@/assets/images/home/200+.png`)
             }
           ]
-        };
-    },
+      }
+    }
 };
 </script>
 

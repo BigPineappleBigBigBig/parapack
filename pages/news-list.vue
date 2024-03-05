@@ -7,7 +7,7 @@
             >
         </div>
         <div class="w-full pl-86px pr-86px min-h-200px">
-            <p class="big_title border_bottom text-19px text-[#333333]">产品公告</p>
+            <p class="big_title border_bottom text-19px text-[#333333]">{{ $t('产品公告') }}</p>
             <!-- 头条带图新闻 -->
             <div 
                 class="w-full flex justify-between mt-34px pb-60px" 
@@ -20,7 +20,7 @@
                     @click="jumpNewDetail(item)"
                 >
                     <div class="w-424px">
-                        <p class="text-15px text-[#333333]">最新通知</p>
+                        <p class="text-15px text-[#333333]">{{ $t('最新通知') }}</p>
                         <p class="text-19px font-medium text-[#333333] mt-15px truncate wrap_one">{{ item.title }}</p>
                         <p class="text-15px text-[#999999] mt-14px truncate ">{{ item.summary }}</p>
                         <p class="text-15px text-[#999999] mt-[46px]">{{ formatData(new Date(item.ctime)) }}</p>

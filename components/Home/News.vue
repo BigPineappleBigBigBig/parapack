@@ -49,8 +49,13 @@ export default {
             ],
         };
     },
-    async created() {
-      this.fetchData();
+    watch: {
+      "$i18n.locale": {
+            handler(v) {
+                v && this.fetchData();
+            },
+            immediate: true,
+        },
     },
     methods: {
         async fetchData() {

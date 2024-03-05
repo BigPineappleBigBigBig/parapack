@@ -12,7 +12,7 @@
             class="w-34px mr-10px"
         >
         <div class="pr-10px">
-            <p class="text-14px text-[#ffffff]">Available on the</p>
+            <p class="text-14px text-[#ffffff]">{{$t('Available on the')}}</p>
             <p class="text-21px font-medium mt-5px text-[#ffffff]">App Store</p>
         </div>
       </div>
@@ -23,7 +23,7 @@
             class="w-34px mr-10px"
         >
         <div>
-            <p class="text-14px text-[#ffffff]">GET IT ON</p>
+            <p class="text-14px text-[#ffffff]">{{$t('GET IT ON')}}</p>
             <p class="text-21px font-medium mt-5px text-[#ffffff]">Google Play</p>
         </div>
       </div>

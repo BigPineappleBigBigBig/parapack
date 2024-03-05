@@ -37,8 +37,8 @@
                 </div>
             </div>
             <!-- 内容2 -->
-            <p class="text-center text-[#333333] text-[51px] mt-106px font-semibold">输入文案，一键生成“真人”营销视频</p>
-            <p class="text-center text-[#676968] text-[17px] mt-31px">通过输入文字生成真人标记视频</p>
+            <p class="text-center text-[#333333] text-[51px] mt-106px font-semibold">{{ $t('输入文案，一键生成“真人”营销视频') }}</p>
+            <p class="text-center text-[#676968] text-[17px] mt-31px">{{ $t('通过输入文字生成真人标记视频') }}</p>
             <div class="flex justify-between">
                 <div 
                     v-for="(item, index) in contentList"
@@ -61,67 +61,66 @@
 </template>
 
 <script>
-const iconList = [
-    {
-        image: require('~/assets/images/video/icon1.svg'),
-        title: 'AI智能人声分离',
-        subTitle: '智能算法分离音轨，一键提取纯净干音'
-    },
-    {
-        image: require('~/assets/images/video/icon2.svg'),
-        title: 'AI智能文字快剪',
-        subTitle: '视频粗剪太低效？基于文本剪辑，事半功倍'
-    },
-    {
-        image: require('~/assets/images/video/icon3.svg'),
-        title: 'AI智能补帧',
-        subTitle: '光流法智能补帧，慢放也能纵享丝滑'
-    },
-    {
-        image: require('~/assets/images/video/icon1.svg'),
-        title: 'AI智能遮罩',
-        subTitle: '手绘遮罩太繁琐？智能笔刷一划速抠'
-    },
-    {
-        image: require('~/assets/images/video/icon5.svg'),
-        title: 'AI稳定影片',
-        subTitle: '稳像算法全面升级，手持运镜也能稳如泰山'
-    }
-];
-
-const contentList = [
-    {
-        image: require('~/assets/images/video/1.png'),
-        title: '上百套',
-        subTitle: '场景化模版',
-        width: '222',
-        height: '158'
-    },
-    {
-        image: require('~/assets/images/video/2.png'),
-        title: '多国籍',
-        subTitle: '超逼真数字人',
-        width: '194',
-        height: '171'
-    },
-    {
-        image: require('~/assets/images/video/3.png'),
-        title: '0门槛',
-        subTitle: 'AI生成脚本',
-        width: '306',
-        height: '106'
-    }
-];
 export default {
     layout: 'mains',
     async created() {
         // this.$router.push('/market');
     },
-    data() {
-        return {
-            iconList,
-            contentList
-        };
+    computed:{
+        iconList() {
+            return [
+                {
+                    image: require('~/assets/images/video/icon1.svg'),
+                    title: this.$t('AI智能人声分离'),
+                    subTitle: this.$t('智能算法分离音轨，一键提取纯净干音')
+                },
+                {
+                    image: require('~/assets/images/video/icon2.svg'),
+                    title: this.$t('AI智能文字快剪'),
+                    subTitle: this.$t('视频粗剪太低效？基于文本剪辑，事半功倍')
+                },
+                {
+                    image: require('~/assets/images/video/icon3.svg'),
+                    title: this.$t('AI智能补帧'),
+                    subTitle: this.$t('光流法智能补帧，慢放也能纵享丝滑')
+                },
+                {
+                    image: require('~/assets/images/video/icon1.svg'),
+                    title: this.$t('AI智能遮罩'),
+                    subTitle: this.$t('手绘遮罩太繁琐？智能笔刷一划速抠')
+                },
+                {
+                    image: require('~/assets/images/video/icon5.svg'),
+                    title: this.$t('AI稳定影片'),
+                    subTitle: this.$t('稳像算法全面升级，手持运镜也能稳如泰山')
+                }
+            ];
+        },
+        contentList() {
+            return [
+                {
+                    image: require('~/assets/images/video/1.png'),
+                    title: this.$t('上百套'),
+                    subTitle: this.$t('场景化模版'),
+                    width: '222',
+                    height: '158'
+                },
+                {
+                    image: require('~/assets/images/video/2.png'),
+                    title: this.$t('多国籍'),
+                    subTitle: this.$t('超逼真数字人'),
+                    width: '194',
+                    height: '171'
+                },
+                {
+                    image: require('~/assets/images/video/3.png'),
+                    title: this.$t('0门槛'),
+                    subTitle: this.$t('AI生成脚本'),
+                    width: '306',
+                    height: '106'
+                }
+            ];
+        }
     },
     methods: {
         formatNumber(index) {

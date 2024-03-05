@@ -8,7 +8,7 @@
         <div class="w-full">
             <div class="border_bottom pb-34px">
                 <p class="text-[31px] font-medium text-[#333333] truncate">{{ detail?.title }}</p>
-                <p class="text-[19px] mt-[26px]">产业资讯</p>
+                <p class="text-[19px] mt-[26px]">{{ $t('产业资讯') }}</p>
                 <p class="text-[14px] text-[#999999] mt-[34px]">{{ detail?.ctime && formatData(new Date(detail?.ctime)) }}</p>
             </div>
             <div 
@@ -22,7 +22,7 @@
             class="w-full mt-86px" 
             v-if="othersDetail?.length"
         >
-            <div class="other_new bg-[#FAFAFA] h-86px text-[31px] text-bold mb-51px">其他新闻</div>
+            <div class="other_new bg-[#FAFAFA] h-86px text-[31px] text-bold mb-51px">{{ $t('其他新闻') }}</div>
             <div
                 class="other_new_item bg-[#FAFAFA] h-128px text-[15px] mb-34px flex pt-17px pb-26px pl-43px pr-34px justify-between items-center"
                 v-for="(item, index) in othersDetail"
@@ -42,7 +42,7 @@
                     class="flex items-center w-85px text-[#3B28CC] text-[17px] hover_opacity"
                     @click="jumpNewDetail(item)"
                 >
-                    查看详情
+                    {{ $t('查看详情') }}
                     <i class="el-icon-arrow-right text-[16px] text-bold"></i>
                 </p>
             </div>

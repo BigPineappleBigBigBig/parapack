@@ -30,7 +30,7 @@ export default {
                 },
                 {
                     title: this.$t("视频"),
-                    name: "/vodeo",
+                    name: "/video",
                 },
                 {
                     title: this.$t("活动"),
