@@ -1,10 +1,14 @@
 <template>
     <div class="bg-white w-full h-auto text-[#333333]">
-        <div>
+        <div class="relative w-full">
             <img
                 class="w-full h-auto"
                 src="~/assets/images/newsListBanner.jpg"
-            >
+            />
+            <div class="absolute top-[61px] left-[195px]">
+                <p class="text-[#333333] text-[41px] font-semibold">{{ $t('公告列表') }}</p>
+                <div class="bg-[#333333] w-[67px] h-[7px] mt-[9px]"></div>
+            </div>
         </div>
         <div class="w-full pl-86px pr-86px min-h-200px">
             <p class="big_title border_bottom text-19px text-[#333333]">{{ $t('产品公告') }}</p>
