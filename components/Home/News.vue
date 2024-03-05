@@ -1,11 +1,11 @@
 <template>
-  <div class="px-86px w-full flex items-center justify-center bg-[#F2F1FF] h-50px">
+  <div class="pp-box w-full flex items-center justify-center bg-[#F2F1FF] h-50px">
 
       <div class="flex flex-1">
           
           <img
               :src="require(`@/assets/images/home/news_icon.svg`)"
-              class="w-21px h-[auto] mr-9px ml-56px"
+              class="w-21px h-[auto] mr-9px"
           />
 
           <div class="flex-1 flex items-center">

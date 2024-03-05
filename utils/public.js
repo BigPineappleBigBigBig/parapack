@@ -2,6 +2,7 @@
 // import 'moment-timezone';
 import { extend } from './extend';
 import { json2search } from './json2search';
+import {fix} from '@/utils/math';
 
 export function isPrd() {
     if (process.server) {
@@ -351,5 +352,17 @@ export const getNumberClass = (value,type='text') => {
         return type==='text' ? 'text-red' : 'border-red';
     }
     return type==='text' ? 'pp-text-t1' : 'border-[#333333]';
+};
+const pricisionZero = (pricision) => (pricision > 0 ? `0.${Array(pricision).fill(0).join('')}` : '0');
+
+export const formatNumber = (value, pricision = 2, prefix) => {
+    if (prefix) {
+        if (Number(value)> 0) {
+            return `+${fix(value, pricision)}`;
+        }
+    }
+    return fix(value, pricision).toString() === '0'
+        ? pricisionZero(pricision)
+        : fix(value, pricision);
 };
 

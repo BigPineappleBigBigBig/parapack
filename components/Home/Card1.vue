@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full pl-139px mt-43px content_wrapper relative">      
+  <div class="w-full pp-box mt-43px content_wrapper relative">      
     <img
         :src="require(`@/assets/images/home/bg.png`)"
         class="w-full back_bg"

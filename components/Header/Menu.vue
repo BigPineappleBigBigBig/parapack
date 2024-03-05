@@ -32,10 +32,10 @@ export default {
                     title: "活动",
                     name: "/activity",
                 },
-                {
-                    title: "联系我们",
-                    name: "/contact",
-                },
+                // {
+                //     title: "联系我们",
+                //     name: "/contact",
+                // },
             ],
         };
     },

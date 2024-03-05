@@ -65,6 +65,7 @@ export default {
     plugins,
     buildModules: [
         'nuxt-windicss',
+        'lodash-es'
     ],
     modules: [
         '@nuxt/typescript-build',

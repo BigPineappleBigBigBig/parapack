@@ -43,7 +43,7 @@ export default {
             if (code === 200) {
                 this.tags = [...data];
             } else {
-                Message.error(msg);
+                this.$message.error(msg);
             }
       }
     }
