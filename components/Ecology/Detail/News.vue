@@ -78,7 +78,7 @@ export default {
         // 复制链接
         clickCopy() {
             copy(location.href);
-            Message.success("复制成功");
+            Message.success(this.$t("复制成功"));
         },
     },
 };

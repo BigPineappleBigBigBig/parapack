@@ -22,7 +22,7 @@
                 :href="data.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                >去兑换</a
+                >{{$t('去兑换')}}</a
             > -->
         </div>
         <div
@@ -125,7 +125,7 @@ export default {
         })),
                 series: this.option.series.map((seri) =>
                     deepMerge(seri, {
-                      name: "价格",
+                      name: this.$t("价格"),
                         data: this.yData,
                     })
                 ),

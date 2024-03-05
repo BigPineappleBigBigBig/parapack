@@ -4,7 +4,7 @@
                 <h4
                     class="text-31px pp-text-t1 font-600 mb-34px"
                 >
-                    更多
+                    {{$t('更多')}}
                 </h4>
                 <ul class="flex gap-34px">
                     <li
@@ -26,26 +26,26 @@
 <script>
 export default {
   name: 'MoreList',
-  data: () => {
-    return {
-      ppHrefs:[
+  computed: {
+    ppHrefs() {
+        return [
                 {
-                    text: '关于 ParaPack',
+                    text: this.$t('关于 ParaPack'),
                     href: '/'
                 },
                 // {
-                //     text: '报告问题',
+                //     text: this.$t('报告问题'),
                 //     href: '/sa'
                 // },
                 {
-                    text: '开发者入驻规则及协议',
+                    text: this.$t('开发者入驻规则及协议'),
                     href: '/aaa'
                 },
                 {
-                    text: '条款与条例',
+                    text: this.$t('条款与条例'),
                     href: '/aaas'
                 },
-            ],
+            ]
     }
   }
 }

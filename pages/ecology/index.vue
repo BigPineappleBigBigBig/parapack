@@ -18,20 +18,20 @@
             <template v-if="!searchVal">
                 <BrandListVue
                     :tag="'hot'"
-                    title="活动热力榜"
+                    :title="$t('活动热力榜')"
                 />
                 <BrandListVue
                     type="timeType"
                 />
                 <BrandListVue
                     :tag="'new'"
-                    title="首发上新生态"
+                    :title="$t('首发上新生态')"
                 />
             </template>
             <template v-else>
                 <BrandListVue
                     :tag="searchVal"
-                    title="搜索到以下结果"
+                    :title="$t('搜索到以下结果')"
                 />
             </template>
         </div>
@@ -67,7 +67,6 @@ export default {
             this.searchVal = '';
         },
         onChangeEvent (v) {
-            console.log(v,'sdas');
             this.searchVal = v;
         }
     }

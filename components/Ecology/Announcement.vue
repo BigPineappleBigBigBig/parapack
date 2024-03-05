@@ -9,7 +9,7 @@
             />
         </div>
         <div class="flex-1">
-            <h6 class="text-14px pp-text-t2 mb-12px">公告</h6>
+            <h6 class="text-14px pp-text-t2 mb-12px">{{$t('公告')}}</h6>
             <el-carousel
             class="w-full"
                 height="15px"

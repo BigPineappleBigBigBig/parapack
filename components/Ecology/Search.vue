@@ -2,7 +2,7 @@
     <div class="h-53px flex ecology-search">
         <el-input
             class="h-full text-19px"
-            placeholder="输入Ddap名称或网址"
+            :placeholder="$t('输入Ddap名称或网址')"
             type="text"
             clearable
             @input="onInputChange"

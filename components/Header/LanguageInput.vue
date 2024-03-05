@@ -8,6 +8,7 @@
           v-for="lang in $i18n.locales"
           :key="lang.code"
           :command="lang.code"
+          :class="$i18n.locale === lang.code ? '!pp-text-primary' : ''"
         >{{ langMap[lang.code] }}</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>

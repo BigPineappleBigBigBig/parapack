@@ -7,10 +7,10 @@
             <div v-else>
                 <el-radio-group v-model="timeType">
                     <el-radio-button label="6h" class="text-31px"
-                        >6时</el-radio-button
+                        >{{$t('6时')}}</el-radio-button
                     >
                     <el-radio-button label="24h" class="text-31px"
-                        >24时</el-radio-button
+                        >{{$t('24时')}}</el-radio-button
                     >
                 </el-radio-group>
             </div>
@@ -19,7 +19,7 @@
                 v-if="isMore && !isTime"
                 class="pp-text-primary text-15px hover_opacity hover:(underline)"
             >
-                查看更多
+                {{$t('查看更多')}}
             </nuxt-link>
         </div>
         <div v-loading="loading" :class="loading ? 'h-200px' : ''">
@@ -103,7 +103,7 @@ export default {
             if (code === 200) {
                 this.dataList = [...data.lists.slice(0, 6)];
             } else {
-                essage.error(msg);
+                Message.error(msg);
             }
         },
     },
