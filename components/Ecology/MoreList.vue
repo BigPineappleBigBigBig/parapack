@@ -12,7 +12,7 @@
                         :key="hrefInfo.href"
                     >
                         <nuxt-link
-                            :to="`/${hrefInfo.href}`"
+                            :to="localePath(`/${hrefInfo.href}`)"
                             class="block min-w-267px py-26px text-19px pp-text-primary bg-[#fff] text-center rounded-9px hover:(0.7)"
                         >
                             {{ hrefInfo.text }}

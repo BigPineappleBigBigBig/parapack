@@ -12,17 +12,17 @@
           />
 
           <div class="flex-1 flex items-center">
-              <p class="text-15px text-[#3B28CC] mr-10px">公告列表:</p>
+              <p class="text-15px text-[#3B28CC] mr-10px">{{$t('公告列表')}}:</p>
               <el-carousel
                   class="flex-1"
                   height="15px"
                   direction="vertical"
                   autoplay
-                  interval="5000"
+                  :interval="5000"
                   loop
               >
                   <el-carousel-item v-for="item in list" :key="item.id">
-                      <nuxt-link :to="`/news-detail?id=${item.id}`" class="block text-15px text-[#3B28CC] h-15px hover:(pp-text-primary)">
+                      <nuxt-link :to="localePath(`/news-detail?id=${item.id}`)" class="block text-15px text-[#3B28CC] h-15px hover:(pp-text-primary)">
                           {{ item.title }}
                       </nuxt-link>
                   </el-carousel-item>
@@ -31,9 +31,9 @@
       </div>
       <!-- 更多 -->
       
-      <nuxt-link :to="`/news-list`" >
+      <nuxt-link :to="localePath(`/news-list`)" >
           <div class="cursor-pointer flex items-center hover_opacity">
-            <p class="text-[#3B28CC] text-[15px]">更多</p>
+            <p class="text-[#3B28CC] text-[15px]">{{$t('更多')}}</p>
             <i
                 class="el-icon-arrow-right text-[15px] text-[#3B28CC] text-bold"
             ></i>

@@ -15,7 +15,7 @@
                 </el-radio-group>
             </div>
             <nuxt-link
-                :to="`/ecology/detail?t=${tag}`"
+                :to="localePath(`/ecology/detail?t=${tag}`)"
                 v-if="isMore && !isTime"
                 class="pp-text-primary text-15px hover_opacity hover:(underline)"
             >

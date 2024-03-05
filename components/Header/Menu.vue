@@ -6,7 +6,7 @@
             :class="`text-15px h-full flex items-center justify-center hover:(pp-text-primary font-600) ${activeRoute.includes(itemMenu.name) && activeRoute !== '/' ? 'pp-text-primary font-600' : ''}`"
            
         >
-            <nuxt-link :to="itemMenu.name">
+            <nuxt-link :to="localePath(itemMenu.name)">
                 {{ itemMenu.title }}
             </nuxt-link>
         </li>

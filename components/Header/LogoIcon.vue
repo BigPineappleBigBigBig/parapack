@@ -5,12 +5,10 @@
 </template>
 
 <script>
-import {localePath} from '@nuxtjs/i18n'
 
 export default {
   name: "LogoIcon",
   methods: {
-    localePath,
     link() {
       
     }
