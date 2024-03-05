@@ -1,7 +1,7 @@
 <template>
     <el-dropdown szie="medium" trigger="click" @command="onChange">
-      <span class="cursor-pointer">
-        {{ langMap[$i18n.locale] }}<i class="el-icon-arrow-down el-icon--right"></i>
+      <span class="cursor-pointer flex items-center text-[#AAAAAA]">
+        <img src="~/assets/images/language.png" class="w-15px h-15px mr-7px"/>{{ langMap[$i18n.locale] }}<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item
@@ -13,8 +13,6 @@
     </el-dropdown>
 </template>
 <script>
-import Cookies from 'js-cookie';
-
 export default {
   name: "LanguageInput",
   data: function () {
