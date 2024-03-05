@@ -1,7 +1,7 @@
 import { post, get } from '~/utils/requests';
 
-const getNews = async (): Promise<any> => {
-  const result = await post('/news');
+const getNews = async (params): Promise<any> => {
+  const result = await post('/news', params);
   return result;
 };
 

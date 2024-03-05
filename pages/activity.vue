@@ -19,15 +19,20 @@
 
         <div class="flex items-center justify-center mt-[26px]">
             <div class="flex text-white text-[15px] mr-[111px] border_bottom pb-5px hover_opacity">
-                <img src="~/assets/images/activity/download.svg" class="w-17px"/>
+                <img 
+                    src="~/assets/images/activity/download.svg" 
+                    class="w-17px"
+                />
                 下载APP
             </div>
             <div class="flex text-white text-[15px] border_bottom pb-5px hover_opacity">
-                <img src="~/assets/images/activity/pintu.svg" class="w-17px"/>
+                <img 
+                    src="~/assets/images/activity/pintu.svg" 
+                    class="w-17px"
+                />
                 下载插件
             </div>
         </div>
-
 
     </div>
 </template>

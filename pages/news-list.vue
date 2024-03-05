@@ -6,33 +6,42 @@
                 src="~/assets/images/newsListBanner.jpg"
             >
         </div>
-        <div class="w-full pl-86px pr-86px">
+        <div class="w-full pl-86px pr-86px min-h-200px">
             <p class="big_title border_bottom text-19px text-[#333333]">产品公告</p>
             <!-- 头条带图新闻 -->
-            <div class="w-full flex justify-between mt-34px pb-60px">
+            <div 
+                class="w-full flex justify-between mt-34px pb-60px" 
+                v-if="headNewsList && headNewsList.length"
+            >
                 <div
                     v-for="(item, index) in headNewsList"
                     :key="index"
-                    class="w-719px h-209px head_new_item p-34px flex justify-between"
+                    class="w-719px h-209px head_new_item p-34px flex justify-between hover_opacity"
+                    @click="jumpNewDetail(item)"
                 >
                     <div class="w-424px">
                         <p class="text-15px text-[#333333]">最新通知</p>
                         <p class="text-19px font-medium text-[#333333] mt-15px truncate wrap_one">{{ item.title }}</p>
                         <p class="text-15px text-[#999999] mt-14px truncate ">{{ item.summary }}</p>
-                        <p class="text-15px text-[#999999] mt-[46px]">{{ item.ctime }}</p>
+                        <p class="text-15px text-[#999999] mt-[46px]">{{ formatData(new Date(item.ctime)) }}</p>
                     </div>
-                    <img 
-                        :src="item.coverPicture" 
-                        class="w-161px h-161px"
-                    />
+                    <div class="w-161px h-161px">
+                        <img 
+                            :src="item.coverPicture" 
+                            v-if="item.coverPicture"
+                            class="w-161px h-161px border_radius_half"
+                        />
+                    </div>
+                    
                 </div>
             </div>
             <!-- 新闻列表 -->
-            <div 
+            <div
                 v-for="(item, index) in newsList"
                 :key="index"
                 class="flex items-center justify-between mb-50px hover_opacity"
                 @click="jumpNewDetail(item)"
+                v-loading="loading"
             >
                 <p class="text-[24px] pb-26px w-[76px]">{{ formatNumber(index) }}</p>
                 <div class="border_bottom flex flex-1 items-center justify-between pb-26px">
@@ -40,7 +49,7 @@
                         <p class="text-19px font-medium text-[#333333] truncate">{{ item.title }}</p>
                         <p class="text-15px text-[#999999] mt-17px truncate ">{{ item.summary }}</p>
                     </div>
-                    <p class="text-15px text-[#999999]">{{ item.ctime }}</p>
+                    <p class="text-15px text-[#999999]">{{ formatData(new Date(item.ctime)) }}</p>
                 </div>
             </div>
 
@@ -63,34 +72,27 @@
 </template>
 
 <script>
-const mockNews = {
-    "id": "32423423423",
-    "title": "我是标题",
-    "summary": "摘要大数据哦多久啊酒叟叫哦大是大非叫哦第三金佛山佛山店放假哦胜多负少附件电视剧发多少",
-    "coverPicture": require('~/assets/images/news/coverPicture1.png'),
-    "miniCoverPicture": "string",
-    "content": "",
-    "ctime": "2022-09-12 12:09:32"
-};
+import { getNews } from '~/api';
+import { formatData } from '~/utils/public';
+
 export default {
     layout: 'mains',
     async created() {
-        // this.$router.push('/market');
+        this.fetchData(true);
     },
     data() {
         return {
-            headNewsList: [mockNews, {...mockNews, coverPicture: require('~/assets/images/news/coverPicture2.png')}],
-            newsList: new Array(4).fill(mockNews),
-            total: 10,
-            skip: 0,
-            limit: 4,
-            pageSize: 4,
-            pageNum: 1
+            headNewsList: [],
+            newsList: [],
+            total: 0,
+            pageNum: 1,
+            loading: false,
+            formatData
         };
     },
     methods: {
         formatNumber(index) {
-            let number = (this.pageNum - 1) * this.pageSize + index + 1;
+            let number = (this.pageNum - 1) * 4 + index + 1;
             if((number + '').length < 2) {
                 return '0' + number;
             }
@@ -102,9 +104,27 @@ export default {
         },
         pageChange(e) {
             this.pageNum = e;
-            this.skip = (this.pageNum - 1) * this.pageSize;
-            console.log(e);
-        }
+            this.fetchData();
+        },
+        async fetchData(init) {
+            this.loading = true;
+            const { code, msg, data } = await getNews({
+                pageNum: this.pageNum,
+                pageSize: init ? 6 : 4
+            });
+            this.loading = false;
+            if (code === 200) {
+                this.total = data.count;
+                if(init) {
+                    this.headNewsList = data.lists.slice(0, 2);
+                    this.newsList = data.lists.slice(2);
+                    return;
+                }
+                this.newsList = data.lists;
+            } else {
+                Message.error(msg);
+            }
+        },
     }
 
 };
@@ -121,5 +141,8 @@ export default {
 .head_new_item{
   background: #F6F6F6;
   border-radius: 9px;
+}
+.border_radius_half{
+  border-radius: 50%;
 }
 </style>

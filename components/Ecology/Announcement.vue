@@ -1,5 +1,9 @@
 <template>
-  <div class="py-15px w-full pp-bg-3 flex items-center justify-center ">
+  <div 
+      class="py-15px w-full pp-bg-3 flex items-center justify-center "
+      v-if="list && list.length"
+  
+  >
     <div class="flex pp-box w-full items-center justify-between">
     <div class="flex gap-x-24px flex-1">
         <div class="flex items-center justify-center">
@@ -43,26 +47,24 @@ export default {
     data: () => {
         return {
             list: [
-                {
-                    id: "1",
-                    title: "标题",
-                    summary: "内容",
-                    coverPicture: "封面图地址",
-                    miniCoverPicture: "迷你封面图地址",
-                    content: "文章内容",
-                    ctime: "发布日期",
-                },
-                {
-                    id: "2",
-                    title: "标题2",
-                    summary: "内容2",
-                    coverPicture: "封面图地址2",
-                    miniCoverPicture: "迷你封面图地址2",
-                    content: "文章内容2",
-                    ctime: "发布日期2",
-                },
             ],
         };
     },
+    async created() {
+      this.fetchData();
+    },
+    methods: {
+        async fetchData() {
+            const { code, msg, data } = await getNews({
+                pageNum: this.pageNum,
+                pageSize: 5
+            });
+            if (code === 200) {
+                this.list = data.lists;
+            } else {
+                Message.error(msg);
+            }
+        },
+    }
 };
 </script>
