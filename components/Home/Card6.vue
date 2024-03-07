@@ -7,7 +7,7 @@
       </div>
       <div class="right_box flex items-center justify-between w-649px h-103px bg-[#F9F9F9] ml-163px pl-59px pr-59px border-ra">
           <div 
-              class="w-51px h-51px hover_opacity"
+              class="w-51px h-51px"
               v-for="(item, index) in list"
               :key="index"
           >
