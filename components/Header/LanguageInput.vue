@@ -26,7 +26,8 @@ export default {
   },
   methods: {
     onChange(code) {
-      this.$i18n.locale = code;
+      // this.$i18n.locale = code;
+      this.$i18n.setLocale(code)
     }
   }
 }

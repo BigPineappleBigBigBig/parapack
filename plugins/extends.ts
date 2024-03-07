@@ -30,7 +30,6 @@ declare module 'vue/types/vue' {
          * */
         $toast(message: string, type?: string, duration?: number): void;
 
-        $t(message: string): void;
     }
 }
 
