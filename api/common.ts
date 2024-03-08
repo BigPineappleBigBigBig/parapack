@@ -20,9 +20,15 @@ const getUsdtRate = async (): Promise<any> => {
   return result;
 };
 
+const getFooterCss = async (): Promise<any> => {
+  const result = await post('/config/footer');
+  return result;
+};
+
 export {
   getNews,
   getGlobalConfig,
   getCurrentDecimals,
-  getUsdtRate
+  getUsdtRate,
+  getFooterCss
 };

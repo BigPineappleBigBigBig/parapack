@@ -6,32 +6,39 @@
         <p class="text-[#676968] text-17px mt-31px">{{$t('加入以接收最新新闻动态')}}</p>
       </div>
       <div class="right_box flex items-center justify-between w-649px h-103px bg-[#F9F9F9] ml-163px pl-59px pr-59px border-ra">
-          <div 
-              class="w-51px h-51px"
+          <a 
+              class="w-51px h-51px hover_opacity"
               v-for="(item, index) in list"
               :key="index"
+              :href="item.path"
+              target="_blank"
           >
               <img
                   :src="item.image"
                   class="w-51px h-51px"
               />
-          </div>
+          </a>
           
       </div>
   </div>
 </template>
 
 <script>
+// 官网:parapack.net
+// 官方邮箱:service@parapack.net
+// Telegram:https://t.me/ParaPack_Community
+// Twitter:https://twitter.com/parapack_pp
+// discord:https://discord.gg/UCSU2nmtfK
 export default {
     name: "Announcement",
     data: () => {
         return {
             list: [
-                { image: require('~/assets/images/home/1.png'), path: ''},
-                { image: require('~/assets/images/home/2.png'), path: ''},
-                { image: require('~/assets/images/home/3.png'), path: ''},
-                { image: require('~/assets/images/home/4.png'), path: ''},
-                { image: require('~/assets/images/home/5.png'), path: ''}
+                { image: require('~/assets/images/home/1.png'), path: 'https://www.parapack.net'},
+                { image: require('~/assets/images/home/2.png'), path: 'mailto:service@parapack.net'},
+                { image: require('~/assets/images/home/3.png'), path: 'https://twitter.com/parapack_pp'},
+                { image: require('~/assets/images/home/4.png'), path: 'https://t.me/ParaPack_Community'},
+                { image: require('~/assets/images/home/5.png'), path: 'https://discord.gg/UCSU2nmtfK'}
             ]
         };
     },
