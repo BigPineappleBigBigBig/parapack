@@ -6,7 +6,7 @@
         <p class="text-[#333333] text-[49px] mt-[21px] font-medium">{{$t('全球生态活动聚合平台')}}</p>
         <p class="text-[#AAAAAA] text-[21px] mt-[27px]">{{ $t('ParaPack Global Ecosystem Activity Aggregation Platform') }}</p>
         <div class="btns h-[68px] flex mt-[86px]">
-            <div class="bg-[#000000] h-[68px] flex items-center justify-center w-192px btn">
+            <div class="bg-[#000000] h-[68px] flex items-center justify-center w-192px btn cursor-pointer"  @click="downloadApp">
               <img 
                   :src="require(`@/assets/images/home/apple.png`)"
                   class="w-34px mr-10px"
@@ -17,7 +17,7 @@
               </div>
             </div>
 
-            <div class="bg-[#000000] h-[68px] flex items-center justify-center w-192px btn">
+            <div class="bg-[#000000] h-[68px] flex items-center justify-center w-192px btn cursor-pointer" @click="downloadPlugin">
               <img 
                   :src="require(`@/assets/images/home/color.png`)"
                   class="w-34px mr-10px"
@@ -46,6 +46,14 @@ export default {
         return {
         };
     },
+    methods: {
+      downloadApp() {
+        this.$message(this.$t('敬请期待！'));
+      },
+      downloadPlugin() {
+        this.$message(this.$t('敬请期待！'));
+      }
+    }
 };
 </script>
 

@@ -52,10 +52,10 @@ export default {
     },
     methods: {
         downloadApp() {
-            this.$toast('敬请期待！');
+            this.$message(this.$t('敬请期待！'));
         },
         downloadPlugin() {
-            this.$toast('敬请期待！');
+            this.$message(this.$t('敬请期待！'));
         }
     }
 };

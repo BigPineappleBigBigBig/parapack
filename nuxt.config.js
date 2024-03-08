@@ -79,8 +79,11 @@ export default {
             {
                 strategy: 'prefix',
                 locales: [
-                    { code: 'zh_CN', name: '简体中文'},
-                    { code: 'en_US', name: 'English'}
+                    { code: 'zh_CN'},
+                    { code: 'en_US'},
+                    { code: 'zh_HK'},
+                    { code: 'ja_JP'},
+                    { code: 'ko_KR'},
                 ],
                 vueI18nLoader: true,
                 defaultLocale: 'zh_CN',
@@ -121,6 +124,9 @@ export default {
         },
         babel: {
             babelrc: true,
+            plugins: [
+                '@babel/plugin-proposal-optional-chaining'
+            ]
         },
         // postcss: {
         //     // 添加插件名称作为键，参数作为值

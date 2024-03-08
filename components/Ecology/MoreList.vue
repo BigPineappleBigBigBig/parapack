@@ -37,13 +37,13 @@ export default {
                 //     text: this.$t('报告问题'),
                 //     href: '/sa'
                 // },
-                {
-                    text: this.$t('开发者入驻规则及协议'),
-                    href: '/aaa'
-                },
+                // {
+                //     text: this.$t('开发者入驻规则及协议'),
+                //     href: '/aaa'
+                // },
                 {
                     text: this.$t('条款与条例'),
-                    href: '/aaas'
+                    href: `/${this.$i18n.locale}/doc/privacy`
                 },
             ]
     }

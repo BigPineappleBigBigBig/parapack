@@ -42,19 +42,19 @@ Vue.prototype.$toast = function (message: string, type?: string, duration?: numb
     }
     switch (type){
         case 'info':
-            this.$Message.info(config);
+            this.$message.info(config);
             break;
         case 'success':
-            this.$Message.success(config);
+            this.$message.success(config);
             break;
         case 'warning':
-            this.$Message.warning(config);
+            this.$message.warning(config);
             break;
         case 'error':
-            this.$Message.error(config);
+            this.$message.error(config);
             break;
         case 'loading':
-            this.$Message.loading(config);
+            this.$message.loading(config);
             break;
     }
 }

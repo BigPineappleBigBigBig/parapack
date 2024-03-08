@@ -31,7 +31,7 @@ export default {
                                 const res = await this.$axios(request);
                                 this.loading = false;
                                 if (res.code === 1) {
-                                    this.$Message.success({
+                                    this.$message.success({
                                         content: '{#成功#}',
                                         onClose: () => {
                                             if (this.needBack) this.$router.go(-1);
@@ -45,7 +45,7 @@ export default {
                         }
                     });
                 } else {
-                    // this.$Message.error('Fail!');
+                    // this.$message.error('Fail!');
                 }
             });
         },

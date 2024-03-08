@@ -20,7 +20,10 @@ export default {
     return {
       langMap: {
         zh_CN: "简体中文",
-        en_US: "English"
+        en_US: "English",
+        zh_HK: "繁體中文",
+        ja_JP: "日本語",
+        ko_KR: '한국인'
       }
     }
   },
